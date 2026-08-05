@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Latin default */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Sinhala and Tamil need their own stacks and more vertical room.
+     Keeping them separate matters: Noto Sans Sinhala has no Tamil glyphs,
+     so listing both on one rule only works by accident. */
+  html[lang="si"] body {
+    font-family: "Noto Sans Sinhala", "IBM Plex Sans", sans-serif;
+    line-height: 1.85;
+  }
+  html[lang="ta"] body {
+    font-family: "Noto Sans Tamil", "IBM Plex Sans", sans-serif;
+    line-height: 1.85;
+  }
+  html[lang="si"] .font-display,
+  html[lang="si"] .font-headline-lg,
+  html[lang="si"] .font-headline-md,
+  html[lang="si"] .font-headline-sm,
+  html[lang="si"] .font-headline-lg-mobile {
+    font-family: "Noto Sans Sinhala", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+  html[lang="ta"] .font-display,
+  html[lang="ta"] .font-headline-lg,
+  html[lang="ta"] .font-headline-md,
+  html[lang="ta"] .font-headline-sm,
+  html[lang="ta"] .font-headline-lg-mobile {
+    font-family: "Noto Sans Tamil", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  /* Visible keyboard focus everywhere. The original stylesheet removed the
+     focus ring entirely, which makes the page unusable by keyboard. */
+  :focus-visible {
+    outline: 2px solid #e8a020;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  input:focus {
+    outline: none;
+    border-color: #032416;
+  }
+  input:focus-visible {
+    outline: 2px solid #e8a020;
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .ambient-shadow {
+    box-shadow: 0 12px 40px rgba(26, 58, 42, 0.08);
+  }
+  .card-shadow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  }
+  .material-symbols-outlined.fill {
+    font-variation-settings: "FILL" 1;
+  }
+  /* Store badges, built in-house. No imitation Apple/Google marks. */
+  .store-badge {
+    @apply inline-flex items-center gap-3 rounded-xl border px-4 py-2.5 cursor-default select-none;
+  }
+}

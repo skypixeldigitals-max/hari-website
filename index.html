@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HARI | Home services, done right. Launching soon in Sri Lanka.</title>
+<meta name="description" content="HARI connects you with verified home service professionals in Sri Lanka. Fixed prices, live tracking, and secure payments. Get early access.">
+<link rel="canonical" href="https://REPLACE-ME.github.io/hari-website/">
+
+<!-- Open Graph / social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="HARI | Home services, done right.">
+<meta property="og:description" content="Verified professionals. Fixed prices. Live tracking to your door. Launching soon in Sri Lanka.">
+<meta property="og:url" content="https://REPLACE-ME.github.io/hari-website/">
+<meta property="og:image" content="https://REPLACE-ME.github.io/hari-website/assets/img/hero-home.jpg">
+<meta property="og:locale" content="en_LK">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HARI | Home services, done right.">
+<meta name="twitter:description" content="Verified professionals. Fixed prices. Live tracking to your door. Launching soon in Sri Lanka.">
+<meta name="twitter:image" content="https://REPLACE-ME.github.io/hari-website/assets/img/hero-home.jpg">
+<meta name="theme-color" content="#1A3A2A">
+
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Syne:wght@700&family=Noto+Sans+Sinhala:wght@400;600&family=Noto+Sans+Tamil:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+
+<link rel="stylesheet" href="assets/css/site.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "HARI",
+  "url": "https://REPLACE-ME.github.io/hari-website/",
+  "description": "Home services marketplace in Sri Lanka providing verified professionals, fixed prices, and live tracking.",
+  "areaServed": { "@type": "City", "name": "Colombo, Sri Lanka" },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+94740591853",
+    "contactType": "customer support",
+    "areaServed": "LK",
+    "availableLanguage": ["en", "si", "ta"]
+  }
+}
+</script>
+</head>
+
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-tertiary-fixed-dim selection:text-on-tertiary-fixed">
+
+<a href="#hero" class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-2 focus:left-2 focus:bg-primary focus:text-on-primary focus:px-4 focus:py-2 focus:rounded-full">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header class="sticky top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+  <nav class="flex justify-between items-center px-container-padding py-sm max-w-7xl mx-auto" aria-label="Main">
+    <a class="text-headline-sm font-display font-bold text-primary flex items-center gap-1 active:opacity-80" href="#hero">HARI</a>
+
+    <div class="hidden md:flex items-center gap-lg">
+      <a class="text-on-surface-variant hover:text-primary hover:bg-primary-container/10 transition-all duration-300 px-3 py-2 rounded-md font-body-md" data-t="nav_how_it_works" href="#how-it-works">How it works</a>
+      <a class="text-on-surface-variant hover:text-primary hover:bg-primary-container/10 transition-all duration-300 px-3 py-2 rounded-md font-body-md" data-t="nav_services" href="#services">Services</a>
+      <a class="text-on-surface-variant hover:text-primary hover:bg-primary-container/10 transition-all duration-300 px-3 py-2 rounded-md font-body-md" data-t="nav_pro" href="#pro">For professionals</a>
+      <a class="text-on-surface-variant hover:text-primary hover:bg-primary-container/10 transition-all duration-300 px-3 py-2 rounded-md font-body-md" data-t="nav_faq" href="#faq">FAQ</a>
+    </div>
+
+    <div class="flex items-center gap-4">
+      <div class="hidden md:flex items-center bg-surface-container-low rounded-full p-1 text-sm font-label-md text-on-surface-variant border border-outline-variant/30" role="group" aria-label="Language">
+        <button class="px-3 py-1 rounded-full hover:text-primary transition-colors data-[active=true]:bg-surface data-[active=true]:text-primary data-[active=true]:shadow-sm" data-lang="en" onclick="setLanguage('en')" lang="en">EN</button>
+        <button class="px-3 py-1 rounded-full hover:text-primary transition-colors data-[active=true]:bg-surface data-[active=true]:text-primary data-[active=true]:shadow-sm" data-lang="si" onclick="setLanguage('si')" lang="si">සිංහල</button>
+        <button class="px-3 py-1 rounded-full hover:text-primary transition-colors data-[active=true]:bg-surface data-[active=true]:text-primary data-[active=true]:shadow-sm" data-lang="ta" onclick="setLanguage('ta')" lang="ta">தமிழ்</button>
+      </div>
+      <a class="hidden md:inline-flex bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-lg px-4 py-2 rounded-full hover:bg-tertiary-fixed transition-colors active:scale-95 shadow-sm" data-t="nav_cta" href="#hero">Get early access</a>
+
+      <button id="menu-btn" class="md:hidden text-primary p-2 rounded-md" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span class="material-symbols-outlined" id="menu-icon">menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="md:hidden hidden border-t border-outline-variant/30 bg-surface px-container-padding pb-lg pt-md">
+    <div class="flex flex-col gap-1">
+      <a class="text-on-surface-variant hover:text-primary py-3 font-body-md border-b border-outline-variant/20" data-t="nav_how_it_works" href="#how-it-works">How it works</a>
+      <a class="text-on-surface-variant hover:text-primary py-3 font-body-md border-b border-outline-variant/20" data-t="nav_services" href="#services">Services</a>
+      <a class="text-on-surface-variant hover:text-primary py-3 font-body-md border-b border-outline-variant/20" data-t="nav_pro" href="#pro">For professionals</a>
+      <a class="text-on-surface-variant hover:text-primary py-3 font-body-md border-b border-outline-variant/20" data-t="nav_faq" href="#faq">FAQ</a>
+    </div>
+    <div class="mt-lg flex items-center justify-between gap-4">
+      <div class="flex items-center bg-surface-container-low rounded-full p-1 text-sm font-label-md text-on-surface-variant border border-outline-variant/30" role="group" aria-label="Language">
+        <button class="px-3 py-1.5 rounded-full data-[active=true]:bg-surface data-[active=true]:text-primary data-[active=true]:shadow-sm" data-lang="en" onclick="setLanguage('en')" lang="en">EN</button>
+        <button class="px-3 py-1.5 rounded-full data-[active=true]:bg-surface data-[active=true]:text-primary data-[active=true]:shadow-sm" data-lang="si" onclick="setLanguage('si')" lang="si">සිංහල</button>
+        <button class="px-3 py-1.5 rounded-full data-[active=true]:bg-surface data-[active=true]:text-primary data-[active=true]:shadow-sm" data-lang="ta" onclick="setLanguage('ta')" lang="ta">தமிழ்</button>
+      </div>
+      <a class="bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-lg px-4 py-2.5 rounded-full shadow-sm whitespace-nowrap" data-t="nav_cta" href="#hero">Get early access</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="relative pt-24 pb-20 md:pt-32 md:pb-32 px-container-padding min-h-[80vh] flex items-center overflow-hidden" id="hero">
+  <div class="absolute inset-0 z-0">
+    <img src="assets/img/hero-home.jpg" alt="" width="1376" height="768" fetchpriority="high" class="w-full h-full object-cover object-center">
+    <div class="absolute inset-0 bg-gradient-to-r from-primary-container/95 via-primary-container/80 to-transparent"></div>
+    <div class="absolute inset-0 bg-primary-container/50 md:hidden"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto w-full relative z-10">
+    <div class="max-w-xl space-y-lg">
+      <div class="inline-block bg-tertiary-fixed-dim/20 text-tertiary-fixed-dim font-label-md px-3 py-1 rounded-full border border-tertiary-fixed-dim/30 backdrop-blur-sm" data-t="hero_badge">Launching soon in Sri Lanka</div>
+
+      <h1 class="font-display text-headline-lg-mobile sm:text-headline-lg md:text-display text-surface-container-lowest">
+        <span data-t="hero_title_1">Home services,</span><br><span class="text-tertiary-fixed-dim" data-t="hero_title_2">done right.</span>
+      </h1>
+
+      <p class="font-body-lg text-surface-container-highest" data-t="hero_desc">Verified professionals. Fixed upfront pricing. Live tracking to your door. The reliable way to manage your home.</p>
+
+      <form class="mt-xl max-w-md space-y-sm" data-form="client" novalidate>
+        <div class="flex flex-col sm:flex-row gap-sm">
+          <label class="sr-only" for="hero-email" data-t="hero_input">Enter your email</label>
+          <input id="hero-email" name="email" type="email" required autocomplete="email" class="flex-1 px-4 py-3 rounded-full bg-surface-container-lowest text-on-background border-none font-body-md shadow-sm" data-t-placeholder="hero_input" placeholder="Enter your email">
+          <button type="submit" class="bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-lg px-6 py-3 rounded-full hover:bg-tertiary-fixed transition-colors whitespace-nowrap active:scale-95 shadow-md" data-t="hero_btn">Notify me at launch</button>
+        </div>
+        <p class="font-body-sm text-surface-container-highest/70 text-center sm:text-left mt-2" data-t="hero_spam">We'll email you once, on launch day. No spam.</p>
+        <p class="font-body-sm text-tertiary-fixed-dim hidden" data-form-msg role="status" aria-live="polite"></p>
+      </form>
+
+      <!-- Store badges: built in-house, no imitation Apple/Google marks -->
+      <div class="pt-lg flex flex-wrap items-center gap-sm">
+        <span class="store-badge bg-primary/40 border-surface-container-highest/25 text-surface-container-highest">
+          <span class="material-symbols-outlined text-2xl" aria-hidden="true">phone_iphone</span>
+          <span class="leading-tight">
+            <span class="block font-label-md opacity-80" data-t="badge_soon">Coming soon to</span>
+            <span class="block font-label-lg text-surface-container-lowest">App Store</span>
+          </span>
+        </span>
+        <span class="store-badge bg-primary/40 border-surface-container-highest/25 text-surface-container-highest">
+          <span class="material-symbols-outlined text-2xl" aria-hidden="true">android</span>
+          <span class="leading-tight">
+            <span class="block font-label-md opacity-80" data-t="badge_soon">Coming soon to</span>
+            <span class="block font-label-lg text-surface-container-lowest">Google Play</span>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<section class="bg-surface py-12 px-container-padding border-b border-surface-variant">
+  <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-md text-center">
+    <div class="flex flex-col items-center gap-sm p-4 rounded-xl hover:bg-surface-container-lowest transition-colors">
+      <div class="w-16 h-16 rounded-full bg-sage text-primary flex items-center justify-center mb-2"><span class="material-symbols-outlined fill text-3xl" aria-hidden="true">payments</span></div>
+      <span class="font-label-lg text-primary" data-t="trust_1">Fixed prices</span>
+    </div>
+    <div class="flex flex-col items-center gap-sm p-4 rounded-xl hover:bg-surface-container-lowest transition-colors">
+      <div class="w-16 h-16 rounded-full bg-sage text-primary flex items-center justify-center mb-2"><span class="material-symbols-outlined fill text-3xl" aria-hidden="true">verified_user</span></div>
+      <span class="font-label-lg text-primary" data-t="trust_2">Verified pros</span>
+    </div>
+    <div class="flex flex-col items-center gap-sm p-4 rounded-xl hover:bg-surface-container-lowest transition-colors">
+      <div class="w-16 h-16 rounded-full bg-sage text-primary flex items-center justify-center mb-2"><span class="material-symbols-outlined fill text-3xl" aria-hidden="true">location_on</span></div>
+      <span class="font-label-lg text-primary" data-t="trust_3">Live tracking</span>
+    </div>
+    <div class="flex flex-col items-center gap-sm p-4 rounded-xl hover:bg-surface-container-lowest transition-colors">
+      <div class="w-16 h-16 rounded-full bg-sage text-primary flex items-center justify-center mb-2"><span class="material-symbols-outlined fill text-3xl" aria-hidden="true">lock</span></div>
+      <span class="font-label-lg text-primary" data-t="trust_4">Escrow payment</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="py-20 md:py-24 px-container-padding bg-surface-container-lowest" id="how-it-works">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12 md:mb-16">
+      <h2 class="font-display text-headline-lg-mobile md:text-display text-primary mb-sm" data-t="hiw_title">How it works</h2>
+      <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto" data-t="hiw_desc">Simple, transparent, and seamless from booking to completion.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="flex flex-col items-center text-center space-y-4">
+        <div class="w-12 h-12 rounded-full bg-primary text-surface-container-lowest font-headline-md flex items-center justify-center shadow-lg">1</div>
+        <h3 class="font-headline-sm text-primary" data-t="hiw_step1_title">Choose a service</h3>
+        <p class="font-body-md text-on-surface-variant" data-t="hiw_step1_desc">Tell us what needs fixing and where you are.</p>
+      </div>
+      <div class="flex flex-col items-center text-center space-y-4">
+        <div class="w-12 h-12 rounded-full bg-primary text-surface-container-lowest font-headline-md flex items-center justify-center shadow-lg">2</div>
+        <h3 class="font-headline-sm text-primary" data-t="hiw_step2_title">Get a fixed quote</h3>
+        <p class="font-body-md text-on-surface-variant" data-t="hiw_step2_desc">A verified pro inspects the job, then quotes a price that is capped and final.</p>
+      </div>
+      <div class="flex flex-col items-center text-center space-y-4">
+        <div class="w-12 h-12 rounded-full bg-primary text-surface-container-lowest font-headline-md flex items-center justify-center shadow-lg">3</div>
+        <h3 class="font-headline-sm text-primary" data-t="hiw_step3_title">Track them to your door</h3>
+        <p class="font-body-md text-on-surface-variant" data-t="hiw_step3_desc">Watch them arrive live, and confirm their ID before they start.</p>
+      </div>
+      <div class="flex flex-col items-center text-center space-y-4">
+        <div class="w-12 h-12 rounded-full bg-primary text-surface-container-lowest font-headline-md flex items-center justify-center shadow-lg">4</div>
+        <h3 class="font-headline-sm text-primary" data-t="hiw_step4_title">Pay when it's done</h3>
+        <p class="font-body-md text-on-surface-variant" data-t="hiw_step4_desc">We hold your payment until you confirm the work was done right.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="py-20 md:py-24 px-container-padding bg-surface" id="services">
+  <div class="max-w-7xl mx-auto">
+    <div class="mb-10 md:mb-12">
+      <h2 class="font-display text-headline-lg-mobile md:text-display text-primary mb-2" data-t="services_title">Our services</h2>
+      <p class="font-body-lg text-on-surface-variant" data-t="services_desc">Verified professionals for every home need.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <div class="bg-surface-container-lowest rounded-2xl card-shadow hover:ambient-shadow transition-shadow border border-outline-variant/20 flex flex-col overflow-hidden">
+        <div class="h-32 w-full bg-surface-container relative">
+          <img src="assets/img/svc-plumbing.jpg" alt="Plumbing" width="1024" height="1024" loading="lazy" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6 flex flex-col items-center text-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary -mt-12 shadow-sm border border-surface relative z-10"><span class="material-symbols-outlined text-2xl" aria-hidden="true">plumbing</span></div>
+          <div>
+            <h3 class="font-headline-sm text-primary mb-1" data-t="srv_plumbing">Plumbing</h3>
+            <p class="font-body-sm text-on-surface-variant" data-t="srv_plumbing_desc">Leaks, taps, pipes and blockages.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-surface-container-lowest rounded-2xl card-shadow hover:ambient-shadow transition-shadow border border-outline-variant/20 flex flex-col overflow-hidden">
+        <div class="h-32 w-full bg-surface-container relative">
+          <img src="assets/img/svc-electrical.jpg" alt="Electrical" width="1200" height="896" loading="lazy" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6 flex flex-col items-center text-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary -mt-12 shadow-sm border border-surface relative z-10"><span class="material-symbols-outlined text-2xl" aria-hidden="true">electrical_services</span></div>
+          <div>
+            <h3 class="font-headline-sm text-primary mb-1" data-t="srv_electrical">Electrical</h3>
+            <p class="font-body-sm text-on-surface-variant" data-t="srv_electrical_desc">Wiring, sockets, lights and fans.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-surface-container-lowest rounded-2xl card-shadow hover:ambient-shadow transition-shadow border border-outline-variant/20 flex flex-col overflow-hidden">
+        <div class="h-32 w-full bg-surface-container relative">
+          <img src="assets/img/svc-cleaning.jpg" alt="Cleaning" width="1200" height="896" loading="lazy" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6 flex flex-col items-center text-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary -mt-12 shadow-sm border border-surface relative z-10"><span class="material-symbols-outlined text-2xl" aria-hidden="true">cleaning_services</span></div>
+          <div>
+            <h3 class="font-headline-sm text-primary mb-1" data-t="srv_cleaning">Cleaning</h3>
+            <p class="font-body-sm text-on-surface-variant" data-t="srv_cleaning_desc">Deep cleans and regular upkeep.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-surface-container-lowest rounded-2xl card-shadow hover:ambient-shadow transition-shadow border border-outline-variant/20 flex flex-col overflow-hidden">
+        <div class="h-32 w-full bg-surface-container relative">
+          <img src="assets/img/svc-ac.jpg" alt="Air conditioning" width="1024" height="1024" loading="lazy" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6 flex flex-col items-center text-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary -mt-12 shadow-sm border border-surface relative z-10"><span class="material-symbols-outlined text-2xl" aria-hidden="true">ac_unit</span></div>
+          <div>
+            <h3 class="font-headline-sm text-primary mb-1" data-t="srv_ac">Air conditioning</h3>
+            <p class="font-body-sm text-on-surface-variant" data-t="srv_ac_desc">Servicing, repairs and installation.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW WE VERIFY ============ -->
+<section class="py-20 md:py-24 px-container-padding bg-cream" id="verify">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-primary text-center mb-12 md:mb-16 max-w-2xl mx-auto" data-t="verify_title">Nobody works under the HARI name until they clear all four.</h2>
+    <div class="relative max-w-4xl mx-auto">
+      <div class="hidden md:block absolute top-8 left-0 w-full h-[2px] bg-gold z-0" aria-hidden="true"></div>
+      <div class="md:hidden absolute left-8 top-0 w-[2px] h-full bg-gold z-0" aria-hidden="true"></div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 relative z-10">
+        <div class="flex md:flex-col items-center gap-4 md:text-center">
+          <div class="w-16 h-16 rounded-full bg-sage text-primary flex items-center justify-center shadow-sm shrink-0"><span class="material-symbols-outlined text-2xl" aria-hidden="true">badge</span></div>
+          <div><h3 class="font-headline-sm text-primary mb-1" data-t="verify_step1_title">NIC scan</h3><p class="font-body-sm text-on-surface-variant" data-t="verify_step1_desc">Both sides of the national identity card.</p></div>
+        </div>
+        <div class="flex md:flex-col items-center gap-4 md:text-center">
+          <div class="w-16 h-16 rounded-full bg-sage text-primary flex items-center justify-center shadow-sm shrink-0"><span class="material-symbols-outlined text-2xl" aria-hidden="true">photo_camera</span></div>
+          <div><h3 class="font-headline-sm text-primary mb-1" data-t="verify_step2_title">Selfie with NIC</h3><p class="font-body-sm text-on-surface-variant" data-t="verify_step2_desc">Confirms the card belongs to the person holding it.</p></div>
+        </div>
+        <div class="flex md:flex-col items-center gap-4 md:text-center">
+          <div class="w-16 h-16 rounded-full bg-sage text-primary flex items-center justify-center shadow-sm shrink-0"><span class="material-symbols-outlined text-2xl" aria-hidden="true">gavel</span></div>
+          <div><h3 class="font-headline-sm text-primary mb-1" data-t="verify_step3_title">Police report</h3><p class="font-body-sm text-on-surface-variant" data-t="verify_step3_desc">A clean record, submitted before approval.</p></div>
+        </div>
+        <div class="flex md:flex-col items-center gap-4 md:text-center">
+          <div class="w-16 h-16 rounded-full bg-sage text-primary flex items-center justify-center shadow-sm shrink-0"><span class="material-symbols-outlined text-2xl" aria-hidden="true">assignment_turned_in</span></div>
+          <div><h3 class="font-headline-sm text-primary mb-1" data-t="verify_step4_title">Manual review</h3><p class="font-body-sm text-on-surface-variant" data-t="verify_step4_desc">A person at HARI approves or rejects every application.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY HARI ============ -->
+<section class="py-20 md:py-24 px-container-padding bg-surface-container-lowest overflow-hidden">
+  <div class="max-w-7xl mx-auto space-y-20 md:space-y-32">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+      <div class="order-2 md:order-1 flex justify-center">
+        <img src="assets/img/feat-pricing.jpg" alt="A fixed price quote shown in the HARI app" width="1376" height="768" loading="lazy" class="w-full max-w-[400px] h-auto rounded-[2.5rem] ambient-shadow object-cover">
+      </div>
+      <div class="order-1 md:order-2 space-y-6">
+        <h2 class="font-display text-headline-lg-mobile md:text-display text-primary" data-t="feat1_title">Fixed prices.<br>No surprises.</h2>
+        <p class="font-body-lg text-on-surface-variant" data-t="feat1_desc">The price is agreed after a proper look at the job, capped, and never changed halfway through. No bait-and-switch.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+      <div class="space-y-6">
+        <h2 class="font-display text-headline-lg-mobile md:text-display text-primary" data-t="feat2_title">Track every step.</h2>
+        <p class="font-body-lg text-on-surface-variant" data-t="feat2_desc">See your professional on the way, know when they'll arrive, and confirm their ID at the gate before any work starts.</p>
+      </div>
+      <div class="flex justify-center relative">
+        <img src="assets/img/feat-tracking.jpg" alt="A homeowner welcoming a HARI professional at her door" width="1264" height="848" loading="lazy" class="w-full max-w-[400px] h-auto rounded-[2.5rem] ambient-shadow object-cover">
+        <div class="hidden md:block absolute -bottom-10 -left-4 lg:-left-10 w-[180px] rounded-[2rem] overflow-hidden border-4 border-surface-container-lowest bg-surface-container-lowest shadow-2xl">
+          <img src="assets/img/app-chat.jpg" alt="The HARI chat screen showing a professional on the way with an ETA" width="780" height="1768" loading="lazy" class="w-full h-[320px] object-cover object-top">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHERE WE'RE STARTING ============ -->
+<section class="py-20 md:py-24 px-container-padding bg-surface" id="coverage">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+    <div class="flex justify-center">
+      <svg class="w-full max-w-[280px] md:max-w-sm h-auto" viewBox="0 0 300 460" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="map-title">
+        <title id="map-title">Map of Sri Lanka with the Colombo district highlighted</title>
+        <path d="M80 9 C62 11 42 12 36 22 C30 34 28 48 32 62 C36 78 40 92 38 106 C34 130 24 165 20 190 C18 202 26 206 29 213 C27 232 23 250 24 266 C25 283 29 295 31 306 C32 318 32 328 34 338 C37 352 41 366 47 378 C57 400 66 424 80 440 C94 450 111 455 127 452 C152 448 175 440 195 429 C212 420 230 413 244 403 C262 388 278 366 286 345 C290 315 280 275 269 248 C253 214 228 178 209 150 C192 122 172 94 156 72 C136 48 104 22 80 9 Z" fill="#E4EEE8"/>
+        <path d="M33 322 C46 318 58 328 56 343 C54 357 40 361 33 352 C28 344 27 328 33 322 Z" fill="#1A3A2A"/>
+        <circle cx="44" cy="338" r="9" fill="#E8A020"/>
+        <circle cx="44" cy="338" r="3.5" fill="#FFFFFF"/>
+      </svg>
+    </div>
+    <div class="space-y-6">
+      <h2 class="font-display text-headline-lg-mobile md:text-display text-primary" data-t="start_title">Starting in Colombo.</h2>
+      <p class="font-body-lg text-on-surface-variant" data-t="start_desc">We're launching in Colombo and the surrounding suburbs first, so we can get every job right before we grow. Then, with your help, across the rest of Sri Lanka.</p>
+      <div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/20 shadow-sm mt-8">
+        <h3 class="font-headline-sm text-primary mb-4" data-t="start_form_title">Not in Colombo? Tell us where you are</h3>
+        <form class="space-y-4" data-form="area" novalidate>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <label class="sr-only" for="area-town" data-t="start_form_town">Your town</label>
+            <input id="area-town" name="town" type="text" required list="sl-towns" autocomplete="off" class="w-full px-4 py-3 rounded-xl bg-surface-container text-on-background border-none font-body-md" data-t-placeholder="start_form_town" placeholder="Your town">
+            <label class="sr-only" for="area-email" data-t="start_form_email">Your email</label>
+            <input id="area-email" name="email" type="email" required autocomplete="email" class="w-full px-4 py-3 rounded-xl bg-surface-container text-on-background border-none font-body-md" data-t-placeholder="start_form_email" placeholder="Your email">
+          </div>
+          <button type="submit" class="w-full bg-primary text-on-primary font-label-lg px-6 py-3 rounded-xl hover:bg-primary/90 transition-colors shadow-sm" data-t="start_form_btn">Request HARI in my area</button>
+          <p class="font-body-sm text-primary hidden" data-form-msg role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HARI+ ============ -->
+<section class="bg-primary-container text-surface-container-lowest py-16 px-container-padding">
+  <div class="max-w-5xl mx-auto bg-primary rounded-3xl p-8 md:p-12 border border-tertiary-fixed-dim/20 flex flex-col md:flex-row items-center justify-between gap-8 ambient-shadow">
+    <div class="space-y-4 text-center md:text-left">
+      <div class="inline-flex items-center gap-2 bg-tertiary-fixed-dim/10 text-tertiary-fixed-dim px-4 py-1.5 rounded-full font-label-lg border border-tertiary-fixed-dim/30">
+        <span class="material-symbols-outlined text-sm" aria-hidden="true">stars</span><span data-t="hariplus_badge">Introducing HARI+</span>
+      </div>
+      <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-surface-container-lowest" data-t="hariplus_title">A membership that pays for itself.</h2>
+      <p class="font-body-md text-surface-container-highest max-w-md" data-t="hariplus_desc">10% off every job, 5% back in credits, priority booking and an extended workmanship warranty. Available at launch.</p>
+    </div>
+    <a href="#hero" class="bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-lg px-8 py-4 rounded-full hover:bg-tertiary-fixed transition-colors active:scale-95 shadow-md whitespace-nowrap" data-t="hariplus_btn">Join the waitlist</a>
+  </div>
+</section>
+
+<!-- ============ FOR PROFESSIONALS ============ -->
+<section class="py-20 md:py-24 px-container-padding bg-background" id="pro">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+    <div class="space-y-8">
+      <h2 class="font-display text-headline-lg-mobile md:text-display text-primary" data-t="pro_title">Steady work.<br>Paid on time.</h2>
+      <p class="font-body-lg text-on-surface-variant" data-t="pro_desc">Join Sri Lanka's network for verified home service professionals. A fair 18% commission, jobs that come to you, and payment protected in escrow so you always get paid.</p>
+      <ul class="space-y-4">
+        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary-fixed-dim" aria-hidden="true">check_circle</span><span class="font-body-md text-primary" data-t="pro_benefit1">Fair 18% commission</span></li>
+        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary-fixed-dim" aria-hidden="true">check_circle</span><span class="font-body-md text-primary" data-t="pro_benefit2">Escrow protects your payment</span></li>
+        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary-fixed-dim" aria-hidden="true">check_circle</span><span class="font-body-md text-primary" data-t="pro_benefit3">Work the hours you choose</span></li>
+      </ul>
+      <form class="space-y-4 max-w-md" data-form="pro" novalidate>
+        <div class="flex flex-col sm:flex-row gap-sm">
+          <label class="sr-only" for="pro-email" data-t="pro_input">Your email</label>
+          <input id="pro-email" name="email" type="email" required autocomplete="email" class="flex-1 px-4 py-3 rounded-full bg-surface-container-lowest text-on-background border border-outline-variant/30 font-body-md shadow-sm" data-t-placeholder="pro_input" placeholder="Your email">
+          <button type="submit" class="bg-primary text-on-primary font-label-lg px-6 py-3 rounded-full hover:bg-primary/90 transition-colors active:scale-95 shadow-md whitespace-nowrap" data-t="pro_btn">Join as a professional</button>
+        </div>
+        <p class="font-body-sm text-primary hidden" data-form-msg role="status" aria-live="polite"></p>
+      </form>
+    </div>
+    <div class="bg-surface-container-lowest p-6 md:p-8 rounded-3xl ambient-shadow border border-outline-variant/20">
+      <div class="aspect-square bg-surface-variant rounded-2xl overflow-hidden">
+        <img src="assets/img/pro-portrait.jpg" alt="A HARI professional at work" width="1376" height="768" loading="lazy" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE PEOPLE BEHIND HARI ============ -->
+<section class="py-20 md:py-24 px-container-padding bg-surface" id="team">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12 md:mb-16">
+      <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-primary" data-t="team_title">The people behind HARI.</h2>
+    </div>
+    <div class="space-y-8 max-w-4xl mx-auto">
+
+      <div class="bg-surface-container-lowest p-6 md:p-8 rounded-3xl border border-outline-variant/20 shadow-sm flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start">
+        <div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden shrink-0 border-4 border-surface-variant bg-sage">
+          <img src="assets/img/team-3.jpg" alt="Devike, founder of HARI" width="400" height="400" loading="lazy" class="w-full h-full object-cover">
+        </div>
+        <div class="space-y-4 flex-1 text-center md:text-left">
+          <h3 class="font-headline-sm text-primary" data-t="team_1_name">Devike — Founder</h3>
+          <p class="font-body-md text-on-surface-variant leading-relaxed" data-t="team_1_note">HARI is my idea. It came from something every household here knows too well — you need something fixed, and there's no safe way to find someone you can trust. I designed HARI to fix that: so you know who's coming, what it costs, and that someone stands behind the work. Every promise this app makes starts with me.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-surface-container-lowest p-6 md:p-8 rounded-3xl border border-outline-variant/20 shadow-sm flex flex-col items-center text-center gap-4">
+          <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-surface-variant bg-sage">
+            <img src="assets/img/team-2.jpg" alt="Mubarak-D, co-founder and technology" width="1024" height="1024" loading="lazy" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h3 class="font-headline-sm text-primary mb-2" data-t="team_2_name">Mubarak-D — Co-founder &amp; Technology</h3>
+            <p class="font-body-sm text-on-surface-variant" data-t="team_2_note">Built the app. The tracking that shows your pro on the way, the PIN that confirms it's really them, and the payment that isn't released until you're happy — that's his work.</p>
+          </div>
+        </div>
+        <div class="bg-surface-container-lowest p-6 md:p-8 rounded-3xl border border-outline-variant/20 shadow-sm flex flex-col items-center text-center gap-4">
+          <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-surface-variant bg-sage">
+            <img src="assets/img/team-1.jpg" alt="Devangi, marketing and operations" width="200" height="200" loading="lazy" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h3 class="font-headline-sm text-primary mb-2" data-t="team_3_name">Devangi — Marketing &amp; Operations</h3>
+            <p class="font-body-sm text-on-surface-variant" data-t="team_3_note">Makes sure the professional who arrives is the right one. Handles the checks, the standards and the day-to-day running, so the person at your gate has already been verified long before you needed them.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="py-24 md:py-32 px-container-padding bg-surface-container-lowest text-center flex flex-col items-center">
+  <h2 class="font-display text-headline-lg-mobile md:text-display text-primary mb-6" data-t="cta_title">Be the first to know.</h2>
+  <p class="font-body-lg text-on-surface-variant mb-10 max-w-xl" data-t="cta_desc">We'll email you once, on the day HARI opens in Colombo.</p>
+  <form class="w-full max-w-md space-y-sm mb-10" data-form="client" novalidate>
+    <div class="flex flex-col sm:flex-row gap-sm">
+      <label class="sr-only" for="cta-email" data-t="hero_input">Enter your email</label>
+      <input id="cta-email" name="email" type="email" required autocomplete="email" class="flex-1 px-4 py-3 rounded-full bg-surface text-on-background border border-outline-variant/30 font-body-md shadow-sm" data-t-placeholder="hero_input" placeholder="Enter your email">
+      <button type="submit" class="bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-lg px-6 py-3 rounded-full hover:bg-tertiary-fixed transition-colors whitespace-nowrap active:scale-95 shadow-md" data-t="hero_btn">Notify me at launch</button>
+    </div>
+    <p class="font-body-sm text-primary hidden" data-form-msg role="status" aria-live="polite"></p>
+  </form>
+  <div class="flex flex-wrap justify-center items-center gap-sm">
+    <span class="store-badge bg-surface border-outline-variant/40 text-on-surface-variant">
+      <span class="material-symbols-outlined text-2xl" aria-hidden="true">phone_iphone</span>
+      <span class="leading-tight text-left"><span class="block font-label-md opacity-70" data-t="badge_soon">Coming soon to</span><span class="block font-label-lg text-primary">App Store</span></span>
+    </span>
+    <span class="store-badge bg-surface border-outline-variant/40 text-on-surface-variant">
+      <span class="material-symbols-outlined text-2xl" aria-hidden="true">android</span>
+      <span class="leading-tight text-left"><span class="block font-label-md opacity-70" data-t="badge_soon">Coming soon to</span><span class="block font-label-lg text-primary">Google Play</span></span>
+    </span>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="py-20 md:py-24 px-container-padding bg-surface" id="faq">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-12 md:mb-16">
+      <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-primary mb-sm" data-t="faq_title">Frequently asked questions</h2>
+    </div>
+    <div class="space-y-sm">
+      <details class="group bg-surface-container-lowest rounded-xl ambient-shadow p-6 [&_summary::-webkit-details-marker]:hidden border border-outline-variant/20">
+        <summary class="flex justify-between items-center gap-4 font-label-lg text-primary cursor-pointer"><span data-t="faq_q1">When is HARI launching?</span><span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-on-surface-variant shrink-0" aria-hidden="true">expand_more</span></summary>
+        <p class="font-body-md text-on-surface-variant mt-4 pt-4 border-t border-outline-variant/30 leading-relaxed" data-t="faq_a1">We're in final testing in Colombo. Join the list and you'll be the first to know the date — we'll email you once, on launch day.</p>
+      </details>
+      <details class="group bg-surface-container-lowest rounded-xl ambient-shadow p-6 [&_summary::-webkit-details-marker]:hidden border border-outline-variant/20">
+        <summary class="flex justify-between items-center gap-4 font-label-lg text-primary cursor-pointer"><span data-t="faq_q2">Which areas will you cover first?</span><span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-on-surface-variant shrink-0" aria-hidden="true">expand_more</span></summary>
+        <p class="font-body-md text-on-surface-variant mt-4 pt-4 border-t border-outline-variant/30 leading-relaxed" data-t="faq_a2">Colombo and the immediate suburbs at launch. If you're outside that area, tell us where you are and we'll use it to decide where we go next.</p>
+      </details>
+      <details class="group bg-surface-container-lowest rounded-xl ambient-shadow p-6 [&_summary::-webkit-details-marker]:hidden border border-outline-variant/20">
+        <summary class="flex justify-between items-center gap-4 font-label-lg text-primary cursor-pointer"><span data-t="faq_q3">How do you verify your professionals?</span><span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-on-surface-variant shrink-0" aria-hidden="true">expand_more</span></summary>
+        <p class="font-body-md text-on-surface-variant mt-4 pt-4 border-t border-outline-variant/30 leading-relaxed" data-t="faq_a3">Four gates, every time: a scan of both sides of the NIC, a selfie holding that NIC, a police report, and a manual review by a person at HARI who can reject the application.</p>
+      </details>
+      <details class="group bg-surface-container-lowest rounded-xl ambient-shadow p-6 [&_summary::-webkit-details-marker]:hidden border border-outline-variant/20">
+        <summary class="flex justify-between items-center gap-4 font-label-lg text-primary cursor-pointer"><span data-t="faq_q4">How is the price decided?</span><span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-on-surface-variant shrink-0" aria-hidden="true">expand_more</span></summary>
+        <p class="font-body-md text-on-surface-variant mt-4 pt-4 border-t border-outline-variant/30 leading-relaxed" data-t="faq_a4">A verified professional visits first and looks at the actual job, then gives you a fixed quote. You approve it before any work starts, and it can't creep up afterwards.</p>
+      </details>
+      <details class="group bg-surface-container-lowest rounded-xl ambient-shadow p-6 [&_summary::-webkit-details-marker]:hidden border border-outline-variant/20">
+        <summary class="flex justify-between items-center gap-4 font-label-lg text-primary cursor-pointer"><span data-t="faq_q5">How do professionals get paid?</span><span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-on-surface-variant shrink-0" aria-hidden="true">expand_more</span></summary>
+        <p class="font-body-md text-on-surface-variant mt-4 pt-4 border-t border-outline-variant/30 leading-relaxed" data-t="faq_a5">HARI holds the client's payment in escrow while the job is on. Once the work is confirmed done, it's released. The professional is never left chasing a customer for money.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Town suggestions for the coverage form. A datalist rather than a <select>:
+     it shows the full list on click, filters as you type, and still accepts a
+     village that isn't listed. A hard <select> would lose those. -->
+<datalist id="sl-towns">
+<option value="Colombo"></option><option value="Dehiwala"></option><option value="Mount Lavinia"></option><option value="Moratuwa"></option><option value="Sri Jayawardenepura Kotte"></option><option value="Maharagama"></option><option value="Nugegoda"></option><option value="Battaramulla"></option><option value="Rajagiriya"></option><option value="Kaduwela"></option><option value="Malabe"></option><option value="Kotikawatta"></option><option value="Kolonnawa"></option><option value="Homagama"></option><option value="Padukka"></option><option value="Hanwella"></option><option value="Avissawella"></option><option value="Kesbewa"></option><option value="Piliyandala"></option><option value="Boralesgamuwa"></option>
+<option value="Negombo"></option><option value="Gampaha"></option><option value="Ja-Ela"></option><option value="Wattala"></option><option value="Kelaniya"></option><option value="Kadawatha"></option><option value="Ragama"></option><option value="Kiribathgoda"></option><option value="Minuwangoda"></option><option value="Divulapitiya"></option><option value="Mirigama"></option><option value="Veyangoda"></option><option value="Nittambuwa"></option><option value="Katunayake"></option><option value="Seeduwa"></option>
+<option value="Kalutara"></option><option value="Panadura"></option><option value="Horana"></option><option value="Beruwala"></option><option value="Aluthgama"></option><option value="Matugama"></option><option value="Bandaragama"></option><option value="Wadduwa"></option><option value="Ingiriya"></option>
+<option value="Kandy"></option><option value="Peradeniya"></option><option value="Katugastota"></option><option value="Gampola"></option><option value="Nawalapitiya"></option><option value="Kadugannawa"></option><option value="Digana"></option><option value="Akurana"></option><option value="Matale"></option><option value="Dambulla"></option><option value="Sigiriya"></option><option value="Galewela"></option><option value="Ukuwela"></option>
+<option value="Nuwara Eliya"></option><option value="Hatton"></option><option value="Talawakelle"></option><option value="Ginigathhena"></option><option value="Maskeliya"></option>
+<option value="Galle"></option><option value="Hikkaduwa"></option><option value="Ambalangoda"></option><option value="Elpitiya"></option><option value="Baddegama"></option><option value="Karapitiya"></option><option value="Unawatuna"></option>
+<option value="Matara"></option><option value="Weligama"></option><option value="Mirissa"></option><option value="Akuressa"></option><option value="Dikwella"></option><option value="Deniyaya"></option><option value="Hakmana"></option>
+<option value="Hambantota"></option><option value="Tangalle"></option><option value="Tissamaharama"></option><option value="Ambalantota"></option><option value="Beliatta"></option><option value="Weeraketiya"></option>
+<option value="Kurunegala"></option><option value="Kuliyapitiya"></option><option value="Narammala"></option><option value="Pannala"></option><option value="Wariyapola"></option><option value="Nikaweratiya"></option><option value="Polgahawela"></option><option value="Mawathagama"></option>
+<option value="Puttalam"></option><option value="Chilaw"></option><option value="Wennappuwa"></option><option value="Marawila"></option><option value="Nattandiya"></option><option value="Anamaduwa"></option>
+<option value="Anuradhapura"></option><option value="Kekirawa"></option><option value="Medawachchiya"></option><option value="Thambuttegama"></option><option value="Mihintale"></option>
+<option value="Polonnaruwa"></option><option value="Kaduruwela"></option><option value="Hingurakgoda"></option><option value="Medirigiriya"></option>
+<option value="Ratnapura"></option><option value="Embilipitiya"></option><option value="Balangoda"></option><option value="Pelmadulla"></option><option value="Eheliyagoda"></option><option value="Kuruwita"></option>
+<option value="Kegalle"></option><option value="Mawanella"></option><option value="Warakapola"></option><option value="Rambukkana"></option><option value="Dehiowita"></option>
+<option value="Badulla"></option><option value="Bandarawela"></option><option value="Haputale"></option><option value="Welimada"></option><option value="Mahiyanganaya"></option><option value="Passara"></option><option value="Ella"></option>
+<option value="Monaragala"></option><option value="Wellawaya"></option><option value="Bibile"></option><option value="Buttala"></option>
+<option value="Trincomalee"></option><option value="Kinniya"></option><option value="Kantale"></option><option value="Muttur"></option>
+<option value="Batticaloa"></option><option value="Kattankudy"></option><option value="Eravur"></option><option value="Valaichchenai"></option><option value="Kalmunai"></option>
+<option value="Ampara"></option><option value="Akkaraipattu"></option><option value="Sammanthurai"></option><option value="Pottuvil"></option><option value="Arugam Bay"></option>
+<option value="Jaffna"></option><option value="Nallur"></option><option value="Chavakachcheri"></option><option value="Point Pedro"></option><option value="Valvettithurai"></option><option value="Kayts"></option>
+<option value="Kilinochchi"></option><option value="Mullaitivu"></option><option value="Mannar"></option><option value="Vavuniya"></option><option value="Cheddikulam"></option>
+</datalist>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-surface-container-lowest w-full border-t border-outline-variant">
+  <div class="py-xl flex flex-col md:flex-row justify-between items-center px-container-padding max-w-7xl mx-auto gap-lg">
+    <div class="flex flex-col items-center md:items-start gap-1">
+      <span class="text-headline-sm font-display font-bold text-primary">HARI</span>
+      <span class="font-body-sm text-on-surface-variant" data-t="footer_copy">© 2026 HARI Home Services. All rights reserved.</span>
+    </div>
+    <div class="flex flex-wrap justify-center gap-md font-body-sm items-center">
+      <a class="text-on-surface-variant hover:text-primary underline decoration-tertiary-fixed-dim underline-offset-4 opacity-80 transition-opacity" data-t="footer_privacy" href="privacy.html">Privacy</a>
+      <a class="text-on-surface-variant hover:text-primary underline decoration-tertiary-fixed-dim underline-offset-4 opacity-80 transition-opacity" data-t="footer_terms" href="terms.html">Terms</a>
+      <a class="text-on-surface-variant hover:text-primary underline decoration-tertiary-fixed-dim underline-offset-4 opacity-80 transition-opacity" href="mailto:REPLACE-ME@example.com" data-t="footer_contact">Email us</a>
+      <a class="flex items-center gap-2 text-primary hover:opacity-100 opacity-90 transition-opacity bg-cream px-3 py-1.5 rounded-full" href="https://wa.me/94740591853" target="_blank" rel="noopener noreferrer">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        +94 74 059 1853
+      </a>
+    </div>
+    <div class="text-on-surface-variant font-body-sm" data-t="footer_made">Made in Sri Lanka, for Sri Lanka.</div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>
