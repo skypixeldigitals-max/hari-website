@@ -9,14 +9,42 @@
    ------------------------------------------------------------------ */
 
 /* ============ 1. CONFIG ============ */
-/* Fill these in from your Google Form. README.md has step-by-step
-   instructions for finding the form ID and the entry.NNNN field IDs.
-   While GOOGLE_FORM_ACTION is empty the forms stay honest: they tell the
-   visitor signups aren't open yet instead of faking a success message. */
-const GOOGLE_FORM_ACTION = ""; // e.g. "https://docs.google.com/forms/d/e/1FAIpQLSc.../formResponse"
-const FIELD_EMAIL = "";        // e.g. "entry.1234567890"
-const FIELD_TOWN = "";         // e.g. "entry.2345678901"
-const FIELD_TYPE = "";         // e.g. "entry.3456789012"  (client / pro / area)
+/* Waitlist storage: Firestore REST, writing into the `waitlist` collection of
+   the existing Firebase project (hari-192a3).
+
+   Two things are needed before this works, both in the Firebase console:
+
+   1. Register a WEB app (Project settings -> Your apps -> Web). The mobile app
+      is registered as Android only, and its API key is Android-restricted, so
+      the browser cannot use it. Copy the new web app's `apiKey` into
+      FIREBASE_API_KEY below.
+
+   2. Allow public creates on `waitlist` only (Firestore -> Rules):
+
+        match /databases/{database}/documents {
+          match /waitlist/{doc} {
+            allow create: if request.resource.data.keys().hasOnly(
+                            ['email','town','kind','createdAt'])
+                          && request.resource.data.email is string
+                          && request.resource.data.email.size() < 200;
+            allow read, update, delete: if false;
+          }
+        }
+
+      Create-only, size-capped, and nobody can read the list back from the
+      browser — you read it in the console. Do not loosen this.
+
+   While FIREBASE_API_KEY is empty the forms stay honest: they tell the visitor
+   signups aren't open yet rather than faking a success message. */
+const FIREBASE_PROJECT_ID = "hari-192a3";
+const FIREBASE_API_KEY = ""; // paste the WEB app's apiKey here to go live
+
+/* Cookieless analytics (Cloudflare Web Analytics): no cookies, no personal
+   data, nothing to consent to. Deliberately inert until a token is set —
+   privacy.html currently states that this site runs no analytics, and that
+   statement must stay true until the moment you switch this on. README has the
+   replacement privacy paragraph to publish in the same change. */
+const ANALYTICS_CF_TOKEN = "";
 
 /* ============ 2. STRINGS ============ */
 /* English is the source of truth. Sinhala and Tamil only need the keys that
@@ -396,7 +424,11 @@ function setLanguage(lang) {
   }
 
   document.querySelectorAll("[data-lang]").forEach(function (btn) {
-    btn.setAttribute("data-active", btn.dataset.lang === lang);
+    const active = btn.dataset.lang === lang;
+    btn.setAttribute("data-active", active);
+    /* aria-pressed is what tells a screen reader which language is currently
+       selected; data-active only drives the visual state. */
+    btn.setAttribute("aria-pressed", String(active));
   });
 
   document.querySelectorAll("[data-t]").forEach(function (el) {
@@ -441,15 +473,24 @@ function handleSubmit(e) {
     return;
   }
 
-  if (!GOOGLE_FORM_ACTION || !FIELD_EMAIL) {
+  if (!FIREBASE_API_KEY) {
     showMsg(form, t("form_offline"), false);
     return;
   }
 
-  const body = new FormData();
-  body.append(FIELD_EMAIL, email);
-  if (FIELD_TOWN && townEl) body.append(FIELD_TOWN, townEl.value.trim());
-  if (FIELD_TYPE) body.append(FIELD_TYPE, kind);
+  /* Firestore REST expects typed field values. */
+  const fields = {
+    email: { stringValue: email },
+    kind: { stringValue: kind },
+    createdAt: { timestampValue: new Date().toISOString() }
+  };
+  if (townEl) fields.town = { stringValue: townEl.value.trim() };
+
+  const url =
+    "https://firestore.googleapis.com/v1/projects/" +
+    FIREBASE_PROJECT_ID +
+    "/databases/(default)/documents/waitlist?key=" +
+    FIREBASE_API_KEY;
 
   const original = btn ? btn.textContent : "";
   if (btn) {
@@ -457,10 +498,15 @@ function handleSubmit(e) {
     btn.textContent = t("form_sending");
   }
 
-  /* Google Forms does not send CORS headers, so the response is opaque and
-     cannot be read. A resolved promise means the request left the browser. */
-  fetch(GOOGLE_FORM_ACTION, { method: "POST", mode: "no-cors", body: body })
-    .then(function () {
+  fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ fields: fields })
+  })
+    .then(function (res) {
+      /* Unlike the old Google Forms path this response IS readable, so a
+         failure can be reported honestly instead of assumed successful. */
+      if (!res.ok) throw new Error("HTTP " + res.status);
       showMsg(form, t("form_ok"), true);
       form.reset();
     })
@@ -509,6 +555,16 @@ function initNav() {
   });
 }
 
+/* ============ 6. ANALYTICS ============ */
+function initAnalytics() {
+  if (!ANALYTICS_CF_TOKEN) return; // off by default — see CONFIG
+  const s = document.createElement("script");
+  s.defer = true;
+  s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  s.setAttribute("data-cf-beacon", JSON.stringify({ token: ANALYTICS_CF_TOKEN }));
+  document.head.appendChild(s);
+}
+
 /* ============ INIT ============ */
 document.addEventListener("DOMContentLoaded", function () {
   let saved = "en";
@@ -524,4 +580,5 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   initNav();
+  initAnalytics();
 });

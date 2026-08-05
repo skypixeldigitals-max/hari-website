@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /terms.html
+Disallow: /privacy.html
+
+Sitemap: https://skypixeldigitals-max.github.io/hari-website/sitemap.xml

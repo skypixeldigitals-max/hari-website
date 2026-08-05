@@ -12,12 +12,14 @@
 <meta property="og:title" content="HARI | Home services, done right.">
 <meta property="og:description" content="Verified professionals. Fixed prices. Live tracking to your door. Launching soon in Sri Lanka.">
 <meta property="og:url" content="https://skypixeldigitals-max.github.io/hari-website/">
-<meta property="og:image" content="https://skypixeldigitals-max.github.io/hari-website/assets/img/hero-home.jpg">
+<meta property="og:image" content="https://skypixeldigitals-max.github.io/hari-website/assets/img/og-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_LK">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="HARI | Home services, done right.">
 <meta name="twitter:description" content="Verified professionals. Fixed prices. Live tracking to your door. Launching soon in Sri Lanka.">
-<meta name="twitter:image" content="https://skypixeldigitals-max.github.io/hari-website/assets/img/hero-home.jpg">
+<meta name="twitter:image" content="https://skypixeldigitals-max.github.io/hari-website/assets/img/og-share.jpg">
 <meta name="theme-color" content="#1A3A2A">
 
 <link rel="icon" href="assets/img/favicon.png" type="image/png">
@@ -56,7 +58,7 @@
 <!-- ============ NAV ============ -->
 <header class="sticky top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
   <nav class="flex justify-between items-center px-container-padding py-sm max-w-7xl mx-auto" aria-label="Main">
-    <a class="text-headline-sm font-display font-bold text-primary flex items-center gap-1 active:opacity-80" href="#hero">HARI</a>
+    <a class="text-headline-sm font-display font-bold text-primary inline-flex items-center min-h-[44px] gap-1 active:opacity-80" href="#hero">HARI</a>
 
     <div class="hidden md:flex items-center gap-lg">
       <a class="text-on-surface-variant hover:text-primary hover:bg-primary-container/10 transition-all duration-300 px-3 py-2 rounded-md font-body-md" data-t="nav_how_it_works" href="#how-it-works">How it works</a>
@@ -67,13 +69,13 @@
 
     <div class="flex items-center gap-4">
       <div class="hidden md:flex items-center bg-surface-container-low rounded-full p-1 text-sm font-label-md text-on-surface-variant border border-outline-variant/30" role="group" aria-label="Language">
-        <button class="px-3 py-1 rounded-full hover:text-primary transition-colors data-[active=true]:bg-surface data-[active=true]:text-primary data-[active=true]:shadow-sm" data-lang="en" onclick="setLanguage('en')" lang="en">EN</button>
-        <button class="px-3 py-1 rounded-full hover:text-primary transition-colors data-[active=true]:bg-surface data-[active=true]:text-primary data-[active=true]:shadow-sm" data-lang="si" onclick="setLanguage('si')" lang="si">සිංහල</button>
-        <button class="px-3 py-1 rounded-full hover:text-primary transition-colors data-[active=true]:bg-surface data-[active=true]:text-primary data-[active=true]:shadow-sm" data-lang="ta" onclick="setLanguage('ta')" lang="ta">தமிழ்</button>
+        <button class="px-3 py-2.5 min-h-[40px] rounded-full hover:text-primary transition-colors data-[active=true]:bg-surface data-[active=true]:text-primary data-[active=true]:shadow-sm" data-lang="en" onclick="setLanguage('en')" lang="en" aria-pressed="false">EN</button>
+        <button class="px-3 py-2.5 min-h-[40px] rounded-full hover:text-primary transition-colors data-[active=true]:bg-surface data-[active=true]:text-primary data-[active=true]:shadow-sm" data-lang="si" onclick="setLanguage('si')" lang="si" aria-pressed="false">සිංහල</button>
+        <button class="px-3 py-2.5 min-h-[40px] rounded-full hover:text-primary transition-colors data-[active=true]:bg-surface data-[active=true]:text-primary data-[active=true]:shadow-sm" data-lang="ta" onclick="setLanguage('ta')" lang="ta" aria-pressed="false">தமிழ்</button>
       </div>
       <a class="hidden md:inline-flex bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-lg px-4 py-2 rounded-full hover:bg-tertiary-fixed transition-colors active:scale-95 shadow-sm" data-t="nav_cta" href="#hero">Get early access</a>
 
-      <button id="menu-btn" class="md:hidden text-primary p-2 rounded-md" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+      <button id="menu-btn" class="md:hidden text-primary p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-md" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
         <span class="material-symbols-outlined" id="menu-icon">menu</span>
       </button>
     </div>
@@ -82,16 +84,16 @@
   <!-- Mobile menu -->
   <div id="mobile-menu" class="md:hidden hidden border-t border-outline-variant/30 bg-surface px-container-padding pb-lg pt-md">
     <div class="flex flex-col gap-1">
-      <a class="text-on-surface-variant hover:text-primary py-3 font-body-md border-b border-outline-variant/20" data-t="nav_how_it_works" href="#how-it-works">How it works</a>
-      <a class="text-on-surface-variant hover:text-primary py-3 font-body-md border-b border-outline-variant/20" data-t="nav_services" href="#services">Services</a>
-      <a class="text-on-surface-variant hover:text-primary py-3 font-body-md border-b border-outline-variant/20" data-t="nav_pro" href="#pro">For professionals</a>
-      <a class="text-on-surface-variant hover:text-primary py-3 font-body-md border-b border-outline-variant/20" data-t="nav_faq" href="#faq">FAQ</a>
+      <a class="flex items-center min-h-[48px] text-on-surface-variant hover:text-primary py-3 font-body-md border-b border-outline-variant/20" data-t="nav_how_it_works" href="#how-it-works">How it works</a>
+      <a class="flex items-center min-h-[48px] text-on-surface-variant hover:text-primary py-3 font-body-md border-b border-outline-variant/20" data-t="nav_services" href="#services">Services</a>
+      <a class="flex items-center min-h-[48px] text-on-surface-variant hover:text-primary py-3 font-body-md border-b border-outline-variant/20" data-t="nav_pro" href="#pro">For professionals</a>
+      <a class="flex items-center min-h-[48px] text-on-surface-variant hover:text-primary py-3 font-body-md border-b border-outline-variant/20" data-t="nav_faq" href="#faq">FAQ</a>
     </div>
     <div class="mt-lg flex items-center justify-between gap-4">
-      <div class="flex items-center bg-surface-container-low rounded-full p-1 text-sm font-label-md text-on-surface-variant border border-outline-variant/30" role="group" aria-label="Language">
-        <button class="px-3 py-1.5 rounded-full data-[active=true]:bg-surface data-[active=true]:text-primary data-[active=true]:shadow-sm" data-lang="en" onclick="setLanguage('en')" lang="en">EN</button>
-        <button class="px-3 py-1.5 rounded-full data-[active=true]:bg-surface data-[active=true]:text-primary data-[active=true]:shadow-sm" data-lang="si" onclick="setLanguage('si')" lang="si">සිංහල</button>
-        <button class="px-3 py-1.5 rounded-full data-[active=true]:bg-surface data-[active=true]:text-primary data-[active=true]:shadow-sm" data-lang="ta" onclick="setLanguage('ta')" lang="ta">தமிழ்</button>
+      <div class="flex items-center gap-2 bg-surface-container-low rounded-full p-1 text-sm font-label-md text-on-surface-variant border border-outline-variant/30" role="group" aria-label="Language">
+        <button class="px-4 py-3 min-h-[44px] rounded-full data-[active=true]:bg-surface data-[active=true]:text-primary data-[active=true]:shadow-sm" data-lang="en" onclick="setLanguage('en')" lang="en" aria-pressed="false">EN</button>
+        <button class="px-4 py-3 min-h-[44px] rounded-full data-[active=true]:bg-surface data-[active=true]:text-primary data-[active=true]:shadow-sm" data-lang="si" onclick="setLanguage('si')" lang="si" aria-pressed="false">සිංහල</button>
+        <button class="px-4 py-3 min-h-[44px] rounded-full data-[active=true]:bg-surface data-[active=true]:text-primary data-[active=true]:shadow-sm" data-lang="ta" onclick="setLanguage('ta')" lang="ta" aria-pressed="false">தமிழ்</button>
       </div>
       <a class="bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-lg px-4 py-2.5 rounded-full shadow-sm whitespace-nowrap" data-t="nav_cta" href="#hero">Get early access</a>
     </div>
@@ -103,7 +105,7 @@
 <!-- ============ HERO ============ -->
 <section class="relative pt-24 pb-20 md:pt-32 md:pb-32 px-container-padding min-h-[80vh] flex items-center overflow-hidden" id="hero">
   <div class="absolute inset-0 z-0">
-    <img src="assets/img/hero-home.jpg" alt="" width="1376" height="768" fetchpriority="high" class="w-full h-full object-cover object-center">
+    <picture><source srcset="assets/img/hero-home.webp" type="image/webp"><img src="assets/img/hero-home.jpg" alt="" width="1400" height="781" fetchpriority="high" class="w-full h-full object-cover object-center"></picture>
     <div class="absolute inset-0 bg-gradient-to-r from-primary-container/95 via-primary-container/80 to-transparent"></div>
     <div class="absolute inset-0 bg-primary-container/50 md:hidden"></div>
   </div>
@@ -214,7 +216,7 @@
 
       <div class="bg-surface-container-lowest rounded-2xl card-shadow hover:ambient-shadow transition-shadow border border-outline-variant/20 flex flex-col overflow-hidden">
         <div class="h-32 w-full bg-surface-container relative">
-          <img src="assets/img/svc-plumbing.jpg" alt="Plumbing" width="1024" height="1024" loading="lazy" class="w-full h-full object-cover">
+          <picture><source srcset="assets/img/svc-plumbing.webp" type="image/webp"><img src="assets/img/svc-plumbing.jpg" alt="Plumbing" width="600" height="600" loading="lazy" class="w-full h-full object-cover"></picture>
         </div>
         <div class="p-6 flex flex-col items-center text-center gap-4">
           <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary -mt-12 shadow-sm border border-surface relative z-10"><span class="material-symbols-outlined text-2xl" aria-hidden="true">plumbing</span></div>
@@ -227,7 +229,7 @@
 
       <div class="bg-surface-container-lowest rounded-2xl card-shadow hover:ambient-shadow transition-shadow border border-outline-variant/20 flex flex-col overflow-hidden">
         <div class="h-32 w-full bg-surface-container relative">
-          <img src="assets/img/svc-electrical.jpg" alt="Electrical" width="1200" height="896" loading="lazy" class="w-full h-full object-cover">
+          <picture><source srcset="assets/img/svc-electrical.webp" type="image/webp"><img src="assets/img/svc-electrical.jpg" alt="Electrical" width="600" height="448" loading="lazy" class="w-full h-full object-cover"></picture>
         </div>
         <div class="p-6 flex flex-col items-center text-center gap-4">
           <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary -mt-12 shadow-sm border border-surface relative z-10"><span class="material-symbols-outlined text-2xl" aria-hidden="true">electrical_services</span></div>
@@ -240,7 +242,7 @@
 
       <div class="bg-surface-container-lowest rounded-2xl card-shadow hover:ambient-shadow transition-shadow border border-outline-variant/20 flex flex-col overflow-hidden">
         <div class="h-32 w-full bg-surface-container relative">
-          <img src="assets/img/svc-cleaning.jpg" alt="Cleaning" width="1200" height="896" loading="lazy" class="w-full h-full object-cover">
+          <picture><source srcset="assets/img/svc-cleaning.webp" type="image/webp"><img src="assets/img/svc-cleaning.jpg" alt="Cleaning" width="600" height="448" loading="lazy" class="w-full h-full object-cover"></picture>
         </div>
         <div class="p-6 flex flex-col items-center text-center gap-4">
           <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary -mt-12 shadow-sm border border-surface relative z-10"><span class="material-symbols-outlined text-2xl" aria-hidden="true">cleaning_services</span></div>
@@ -253,7 +255,7 @@
 
       <div class="bg-surface-container-lowest rounded-2xl card-shadow hover:ambient-shadow transition-shadow border border-outline-variant/20 flex flex-col overflow-hidden">
         <div class="h-32 w-full bg-surface-container relative">
-          <img src="assets/img/svc-ac.jpg" alt="Air conditioning" width="1024" height="1024" loading="lazy" class="w-full h-full object-cover">
+          <picture><source srcset="assets/img/svc-ac.webp" type="image/webp"><img src="assets/img/svc-ac.jpg" alt="Air conditioning" width="600" height="600" loading="lazy" class="w-full h-full object-cover"></picture>
         </div>
         <div class="p-6 flex flex-col items-center text-center gap-4">
           <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary -mt-12 shadow-sm border border-surface relative z-10"><span class="material-symbols-outlined text-2xl" aria-hidden="true">ac_unit</span></div>
@@ -302,7 +304,7 @@
   <div class="max-w-7xl mx-auto space-y-20 md:space-y-32">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
       <div class="order-2 md:order-1 flex justify-center">
-        <img src="assets/img/feat-pricing.jpg" alt="A fixed price quote shown in the HARI app" width="1376" height="768" loading="lazy" class="w-full max-w-[400px] h-auto rounded-[2.5rem] ambient-shadow object-cover">
+        <picture><source srcset="assets/img/feat-pricing.webp" type="image/webp"><img src="assets/img/feat-pricing.jpg" alt="A fixed price quote shown in the HARI app" width="800" height="447" loading="lazy" class="w-full max-w-[400px] h-auto rounded-[2.5rem] ambient-shadow object-cover"></picture>
       </div>
       <div class="order-1 md:order-2 space-y-6">
         <h2 class="font-display text-headline-lg-mobile md:text-display text-primary" data-t="feat1_title">Fixed prices.<br>No surprises.</h2>
@@ -316,9 +318,9 @@
         <p class="font-body-lg text-on-surface-variant" data-t="feat2_desc">See your professional on the way, know when they'll arrive, and confirm their ID at the gate before any work starts.</p>
       </div>
       <div class="flex justify-center relative">
-        <img src="assets/img/feat-tracking.jpg" alt="A homeowner welcoming a HARI professional at her door" width="1264" height="848" loading="lazy" class="w-full max-w-[400px] h-auto rounded-[2.5rem] ambient-shadow object-cover">
+        <picture><source srcset="assets/img/feat-tracking.webp" type="image/webp"><img src="assets/img/feat-tracking.jpg" alt="A homeowner welcoming a HARI professional at her door" width="800" height="537" loading="lazy" class="w-full max-w-[400px] h-auto rounded-[2.5rem] ambient-shadow object-cover"></picture>
         <div class="hidden md:block absolute -bottom-10 -left-4 lg:-left-10 w-[180px] rounded-[2rem] overflow-hidden border-4 border-surface-container-lowest bg-surface-container-lowest shadow-2xl">
-          <img src="assets/img/app-chat.jpg" alt="The HARI chat screen showing a professional on the way with an ETA" width="780" height="1768" loading="lazy" class="w-full h-[320px] object-cover object-top">
+          <picture><source srcset="assets/img/app-chat.webp" type="image/webp"><img src="assets/img/app-chat.jpg" alt="The HARI chat screen showing a professional on the way with an ETA" width="400" height="907" loading="lazy" class="w-full h-[320px] object-cover object-top"></picture>
         </div>
       </div>
     </div>
@@ -393,7 +395,7 @@
     </div>
     <div class="bg-surface-container-lowest p-6 md:p-8 rounded-3xl ambient-shadow border border-outline-variant/20">
       <div class="aspect-square bg-surface-variant rounded-2xl overflow-hidden">
-        <img src="assets/img/pro-portrait.jpg" alt="A HARI professional at work" width="1376" height="768" loading="lazy" class="w-full h-full object-cover">
+        <picture><source srcset="assets/img/pro-portrait.webp" type="image/webp"><img src="assets/img/pro-portrait.jpg" alt="A HARI professional at work" width="800" height="447" loading="lazy" class="w-full h-full object-cover"></picture>
       </div>
     </div>
   </div>
@@ -409,7 +411,7 @@
 
       <div class="bg-surface-container-lowest p-6 md:p-8 rounded-3xl border border-outline-variant/20 shadow-sm flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start">
         <div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden shrink-0 border-4 border-surface-variant bg-sage">
-          <img src="assets/img/team-3.jpg" alt="Devike, founder of HARI" width="400" height="400" loading="lazy" class="w-full h-full object-cover">
+          <picture><source srcset="assets/img/team-3.webp" type="image/webp"><img src="assets/img/team-3.jpg" alt="Devike, founder of HARI" width="400" height="400" loading="lazy" class="w-full h-full object-cover"></picture>
         </div>
         <div class="space-y-4 flex-1 text-center md:text-left">
           <h3 class="font-headline-sm text-primary" data-t="team_1_name">Devike — Founder</h3>
@@ -420,7 +422,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="bg-surface-container-lowest p-6 md:p-8 rounded-3xl border border-outline-variant/20 shadow-sm flex flex-col items-center text-center gap-4">
           <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-surface-variant bg-sage">
-            <img src="assets/img/team-2.jpg" alt="Mubarak-D, co-founder and technology" width="1024" height="1024" loading="lazy" class="w-full h-full object-cover">
+            <picture><source srcset="assets/img/team-2.webp" type="image/webp"><img src="assets/img/team-2.png" alt="Mubarak-D, co-founder and technology" width="256" height="256" loading="lazy" class="w-full h-full object-cover"></picture>
           </div>
           <div>
             <h3 class="font-headline-sm text-primary mb-2" data-t="team_2_name">Mubarak-D — Co-founder &amp; Technology</h3>
@@ -429,7 +431,7 @@
         </div>
         <div class="bg-surface-container-lowest p-6 md:p-8 rounded-3xl border border-outline-variant/20 shadow-sm flex flex-col items-center text-center gap-4">
           <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-surface-variant bg-sage">
-            <img src="assets/img/team-1.jpg" alt="Devangi, marketing and operations" width="200" height="200" loading="lazy" class="w-full h-full object-cover">
+            <picture><source srcset="assets/img/team-1.webp" type="image/webp"><img src="assets/img/team-1.jpg" alt="Devangi, marketing and operations" width="256" height="256" loading="lazy" class="w-full h-full object-cover"></picture>
           </div>
           <div>
             <h3 class="font-headline-sm text-primary mb-2" data-t="team_3_name">Devangi — Marketing &amp; Operations</h3>
@@ -474,23 +476,23 @@
     </div>
     <div class="space-y-sm">
       <details class="group bg-surface-container-lowest rounded-xl ambient-shadow p-6 [&_summary::-webkit-details-marker]:hidden border border-outline-variant/20">
-        <summary class="flex justify-between items-center gap-4 font-label-lg text-primary cursor-pointer"><span data-t="faq_q1">When is HARI launching?</span><span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-on-surface-variant shrink-0" aria-hidden="true">expand_more</span></summary>
+        <summary class="flex justify-between items-center gap-4 min-h-[44px] font-label-lg text-primary cursor-pointer"><span data-t="faq_q1">When is HARI launching?</span><span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-on-surface-variant shrink-0" aria-hidden="true">expand_more</span></summary>
         <p class="font-body-md text-on-surface-variant mt-4 pt-4 border-t border-outline-variant/30 leading-relaxed" data-t="faq_a1">We're in final testing in Colombo. Join the list and you'll be the first to know the date — we'll email you once, on launch day.</p>
       </details>
       <details class="group bg-surface-container-lowest rounded-xl ambient-shadow p-6 [&_summary::-webkit-details-marker]:hidden border border-outline-variant/20">
-        <summary class="flex justify-between items-center gap-4 font-label-lg text-primary cursor-pointer"><span data-t="faq_q2">Which areas will you cover first?</span><span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-on-surface-variant shrink-0" aria-hidden="true">expand_more</span></summary>
+        <summary class="flex justify-between items-center gap-4 min-h-[44px] font-label-lg text-primary cursor-pointer"><span data-t="faq_q2">Which areas will you cover first?</span><span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-on-surface-variant shrink-0" aria-hidden="true">expand_more</span></summary>
         <p class="font-body-md text-on-surface-variant mt-4 pt-4 border-t border-outline-variant/30 leading-relaxed" data-t="faq_a2">Colombo and the immediate suburbs at launch. If you're outside that area, tell us where you are and we'll use it to decide where we go next.</p>
       </details>
       <details class="group bg-surface-container-lowest rounded-xl ambient-shadow p-6 [&_summary::-webkit-details-marker]:hidden border border-outline-variant/20">
-        <summary class="flex justify-between items-center gap-4 font-label-lg text-primary cursor-pointer"><span data-t="faq_q3">How do you verify your professionals?</span><span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-on-surface-variant shrink-0" aria-hidden="true">expand_more</span></summary>
+        <summary class="flex justify-between items-center gap-4 min-h-[44px] font-label-lg text-primary cursor-pointer"><span data-t="faq_q3">How do you verify your professionals?</span><span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-on-surface-variant shrink-0" aria-hidden="true">expand_more</span></summary>
         <p class="font-body-md text-on-surface-variant mt-4 pt-4 border-t border-outline-variant/30 leading-relaxed" data-t="faq_a3">Four gates, every time: a scan of both sides of the NIC, a selfie holding that NIC, a police report, and a manual review by a person at HARI who can reject the application.</p>
       </details>
       <details class="group bg-surface-container-lowest rounded-xl ambient-shadow p-6 [&_summary::-webkit-details-marker]:hidden border border-outline-variant/20">
-        <summary class="flex justify-between items-center gap-4 font-label-lg text-primary cursor-pointer"><span data-t="faq_q4">How is the price decided?</span><span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-on-surface-variant shrink-0" aria-hidden="true">expand_more</span></summary>
+        <summary class="flex justify-between items-center gap-4 min-h-[44px] font-label-lg text-primary cursor-pointer"><span data-t="faq_q4">How is the price decided?</span><span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-on-surface-variant shrink-0" aria-hidden="true">expand_more</span></summary>
         <p class="font-body-md text-on-surface-variant mt-4 pt-4 border-t border-outline-variant/30 leading-relaxed" data-t="faq_a4">A verified professional visits first and looks at the actual job, then gives you a fixed quote. You approve it before any work starts, and it can't creep up afterwards.</p>
       </details>
       <details class="group bg-surface-container-lowest rounded-xl ambient-shadow p-6 [&_summary::-webkit-details-marker]:hidden border border-outline-variant/20">
-        <summary class="flex justify-between items-center gap-4 font-label-lg text-primary cursor-pointer"><span data-t="faq_q5">How do professionals get paid?</span><span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-on-surface-variant shrink-0" aria-hidden="true">expand_more</span></summary>
+        <summary class="flex justify-between items-center gap-4 min-h-[44px] font-label-lg text-primary cursor-pointer"><span data-t="faq_q5">How do professionals get paid?</span><span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-on-surface-variant shrink-0" aria-hidden="true">expand_more</span></summary>
         <p class="font-body-md text-on-surface-variant mt-4 pt-4 border-t border-outline-variant/30 leading-relaxed" data-t="faq_a5">HARI holds the client's payment in escrow while the job is on. Once the work is confirmed done, it's released. The professional is never left chasing a customer for money.</p>
       </details>
     </div>
@@ -534,9 +536,9 @@
       <span class="font-body-sm text-on-surface-variant" data-t="footer_copy">© 2026 HARI Home Services. All rights reserved.</span>
     </div>
     <div class="flex flex-wrap justify-center gap-md font-body-sm items-center">
-      <a class="text-on-surface-variant hover:text-primary underline decoration-tertiary-fixed-dim underline-offset-4 opacity-80 transition-opacity" data-t="footer_privacy" href="privacy.html">Privacy</a>
-      <a class="text-on-surface-variant hover:text-primary underline decoration-tertiary-fixed-dim underline-offset-4 opacity-80 transition-opacity" data-t="footer_terms" href="terms.html">Terms</a>
-      <a class="flex items-center gap-2 text-primary hover:opacity-100 opacity-90 transition-opacity bg-cream px-3 py-1.5 rounded-full" href="https://wa.me/94740591853" target="_blank" rel="noopener noreferrer">
+      <a class="inline-flex items-center min-h-[44px] px-1 text-on-surface-variant hover:text-primary underline decoration-tertiary-fixed-dim underline-offset-4 opacity-80 transition-opacity" data-t="footer_privacy" href="privacy.html">Privacy</a>
+      <a class="inline-flex items-center min-h-[44px] px-1 text-on-surface-variant hover:text-primary underline decoration-tertiary-fixed-dim underline-offset-4 opacity-80 transition-opacity" data-t="footer_terms" href="terms.html">Terms</a>
+      <a class="inline-flex items-center gap-2 min-h-[44px] text-primary hover:opacity-100 opacity-90 transition-opacity bg-cream px-4 py-2.5 rounded-full" href="https://wa.me/94740591853" target="_blank" rel="noopener noreferrer">
         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
         +94 74 059 1853
       </a>
