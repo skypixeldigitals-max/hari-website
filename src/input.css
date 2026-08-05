@@ -42,6 +42,24 @@
     line-height: 1.45;
   }
 
+  /* Sinhala and especially Tamil produce very long single words. Without this
+     a word like "தொழில்முறையாளராகச்" cannot break, so it forces a button or
+     heading wider than the phone screen and the whole page scrolls sideways.
+     `anywhere` also feeds min-content sizing, which is what stops flex and
+     grid children from blowing out their container. */
+  html[lang="si"] h1,
+  html[lang="si"] h2,
+  html[lang="si"] h3,
+  html[lang="si"] button,
+  html[lang="si"] a,
+  html[lang="ta"] h1,
+  html[lang="ta"] h2,
+  html[lang="ta"] h3,
+  html[lang="ta"] button,
+  html[lang="ta"] a {
+    overflow-wrap: anywhere;
+  }
+
   /* Visible keyboard focus everywhere. The original stylesheet removed the
      focus ring entirely, which makes the page unusable by keyboard. */
   :focus-visible {
@@ -72,6 +90,18 @@
 }
 
 @layer components {
+  /* Hero height. Plain `vh` counts the strip behind a mobile browser's
+     collapsing toolbar, so the hero is taller than the visible screen and
+     shifts as the bar hides. `svh` measures the smallest stable viewport. */
+  .hero-min-h {
+    min-height: 80vh;
+  }
+  @supports (min-height: 80svh) {
+    .hero-min-h {
+      min-height: 80svh;
+    }
+  }
+
   .ambient-shadow {
     box-shadow: 0 12px 40px rgba(26, 58, 42, 0.08);
   }

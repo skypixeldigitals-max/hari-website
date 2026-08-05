@@ -95,7 +95,7 @@
         <button class="px-4 py-3 min-h-[44px] rounded-full data-[active=true]:bg-surface data-[active=true]:text-primary data-[active=true]:shadow-sm" data-lang="si" onclick="setLanguage('si')" lang="si" aria-pressed="false">සිංහල</button>
         <button class="px-4 py-3 min-h-[44px] rounded-full data-[active=true]:bg-surface data-[active=true]:text-primary data-[active=true]:shadow-sm" data-lang="ta" onclick="setLanguage('ta')" lang="ta" aria-pressed="false">தமிழ்</button>
       </div>
-      <a class="bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-lg px-4 py-2.5 rounded-full shadow-sm whitespace-nowrap" data-t="nav_cta" href="#hero">Get early access</a>
+      <a class="bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-lg px-4 py-2.5 rounded-full shadow-sm sm:whitespace-nowrap" data-t="nav_cta" href="#hero">Get early access</a>
     </div>
   </div>
 </header>
@@ -103,7 +103,7 @@
 <main>
 
 <!-- ============ HERO ============ -->
-<section class="relative pt-24 pb-20 md:pt-32 md:pb-32 px-container-padding min-h-[80vh] flex items-center overflow-hidden" id="hero">
+<section class="relative pt-24 pb-20 md:pt-32 md:pb-32 px-container-padding hero-min-h flex items-center overflow-hidden" id="hero">
   <div class="absolute inset-0 z-0">
     <picture><source srcset="assets/img/hero-home.webp" type="image/webp"><img src="assets/img/hero-home.jpg" alt="" width="1400" height="781" fetchpriority="high" class="w-full h-full object-cover object-center"></picture>
     <div class="absolute inset-0 bg-gradient-to-r from-primary-container/95 via-primary-container/80 to-transparent"></div>
@@ -124,7 +124,7 @@
         <div class="flex flex-col sm:flex-row gap-sm">
           <label class="sr-only" for="hero-email" data-t="hero_input">Enter your email</label>
           <input id="hero-email" name="email" type="email" required autocomplete="email" class="flex-1 px-4 py-3 rounded-full bg-surface-container-lowest text-on-background border-none font-body-md shadow-sm" data-t-placeholder="hero_input" placeholder="Enter your email">
-          <button type="submit" class="bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-lg px-6 py-3 rounded-full hover:bg-tertiary-fixed transition-colors whitespace-nowrap active:scale-95 shadow-md" data-t="hero_btn">Notify me at launch</button>
+          <button type="submit" class="bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-lg px-6 py-3 rounded-full hover:bg-tertiary-fixed transition-colors sm:whitespace-nowrap active:scale-95 shadow-md" data-t="hero_btn">Notify me at launch</button>
         </div>
         <p class="font-body-sm text-surface-container-highest/70 text-center sm:text-left mt-2" data-t="hero_spam">We'll email you once, on launch day. No spam.</p>
         <p class="font-body-sm text-tertiary-fixed-dim hidden" data-form-msg role="status" aria-live="polite"></p>
@@ -369,7 +369,7 @@
       <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-surface-container-lowest" data-t="hariplus_title">A membership that pays for itself.</h2>
       <p class="font-body-md text-surface-container-highest max-w-md" data-t="hariplus_desc">10% off every job, 5% back in credits, priority booking and an extended workmanship warranty. Available at launch.</p>
     </div>
-    <a href="#hero" class="bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-lg px-8 py-4 rounded-full hover:bg-tertiary-fixed transition-colors active:scale-95 shadow-md whitespace-nowrap" data-t="hariplus_btn">Join the waitlist</a>
+    <a href="#hero" class="bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-lg px-8 py-4 rounded-full hover:bg-tertiary-fixed transition-colors active:scale-95 shadow-md sm:whitespace-nowrap" data-t="hariplus_btn">Join the waitlist</a>
   </div>
 </section>
 
@@ -388,7 +388,7 @@
         <div class="flex flex-col sm:flex-row gap-sm">
           <label class="sr-only" for="pro-email" data-t="pro_input">Your email</label>
           <input id="pro-email" name="email" type="email" required autocomplete="email" class="flex-1 px-4 py-3 rounded-full bg-surface-container-lowest text-on-background border border-outline-variant/30 font-body-md shadow-sm" data-t-placeholder="pro_input" placeholder="Your email">
-          <button type="submit" class="bg-primary text-on-primary font-label-lg px-6 py-3 rounded-full hover:bg-primary/90 transition-colors active:scale-95 shadow-md whitespace-nowrap" data-t="pro_btn">Join as a professional</button>
+          <button type="submit" class="bg-primary text-on-primary font-label-lg px-6 py-3 rounded-full hover:bg-primary/90 transition-colors active:scale-95 shadow-md sm:whitespace-nowrap" data-t="pro_btn">Join as a professional</button>
         </div>
         <p class="font-body-sm text-primary hidden" data-form-msg role="status" aria-live="polite"></p>
       </form>
@@ -452,7 +452,7 @@
     <div class="flex flex-col sm:flex-row gap-sm">
       <label class="sr-only" for="cta-email" data-t="hero_input">Enter your email</label>
       <input id="cta-email" name="email" type="email" required autocomplete="email" class="flex-1 px-4 py-3 rounded-full bg-surface text-on-background border border-outline-variant/30 font-body-md shadow-sm" data-t-placeholder="hero_input" placeholder="Enter your email">
-      <button type="submit" class="bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-lg px-6 py-3 rounded-full hover:bg-tertiary-fixed transition-colors whitespace-nowrap active:scale-95 shadow-md" data-t="hero_btn">Notify me at launch</button>
+      <button type="submit" class="bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-lg px-6 py-3 rounded-full hover:bg-tertiary-fixed transition-colors sm:whitespace-nowrap active:scale-95 shadow-md" data-t="hero_btn">Notify me at launch</button>
     </div>
     <p class="font-body-sm text-primary hidden" data-form-msg role="status" aria-live="polite"></p>
   </form>
