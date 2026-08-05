@@ -27,6 +27,9 @@
     font-family: "Noto Sans Sinhala", sans-serif;
     font-weight: 600;
     letter-spacing: 0;
+    /* Syne's 1.1-1.2 heading leading is too tight for Sinhala: the tall
+       ascenders and below-baseline marks collide across wrapped lines. */
+    line-height: 1.45;
   }
   html[lang="ta"] .font-display,
   html[lang="ta"] .font-headline-lg,
@@ -36,6 +39,7 @@
     font-family: "Noto Sans Tamil", sans-serif;
     font-weight: 600;
     letter-spacing: 0;
+    line-height: 1.45;
   }
 
   /* Visible keyboard focus everywhere. The original stylesheet removed the
