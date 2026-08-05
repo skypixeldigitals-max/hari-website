@@ -5,44 +5,66 @@ step required to deploy — the compiled CSS is committed.
 
 ---
 
-## Before you go live — 3 things to fill in
+## Before you go live
 
-### 1. Your GitHub Pages URL
+### 1. Live URL — done
 
-Search `REPLACE-ME` in `index.html` (4 places: canonical, og:url, og:image,
-twitter:image, and the JSON-LD `url`) and swap in your real URL, e.g.
-`https://devike.github.io/hari-website/`.
+The site is deployed at
+<https://skypixeldigitals-max.github.io/hari-website/> and all canonical,
+Open Graph, Twitter and JSON-LD URLs point at it.
 
-### 2. Your contact email
+### 2. Contact email — still open
 
-In `index.html`, search `REPLACE-ME@example.com` in the footer.
+The footer carries WhatsApp only. No email address was supplied, so the
+"Email us" link was removed rather than shipping a dead `mailto:`.
 
-### 3. The signup forms (Google Form)
+### 3. The signup forms (Firebase)
 
-All three forms — homepage waitlist, "not in Colombo", and the professionals
-signup — post to one Google Form. Until you set this up, the forms show an
-honest "signups open shortly" message rather than faking success.
+All three forms write into the `waitlist` collection of your existing Firebase
+project (`hari-192a3`). Until this is done the forms show an honest "signups
+open shortly" message instead of faking success.
 
-1. Create a Google Form with three short-answer questions, in this order:
-   **Email**, **Town**, **Type**.
-2. Click **Send → `<>`** (embed) and copy the form URL. It looks like
-   `https://docs.google.com/forms/d/e/1FAIpQLSc.../viewform`.
-3. In the form's live page, right-click → **View page source**, then search for
-   `entry.` — you'll find three IDs like `entry.1234567890`. They appear in the
-   same order as your questions.
-4. Open `assets/js/site.js` and fill in the CONFIG block at the top:
+Two steps, both in the Firebase console:
 
-```js
-const GOOGLE_FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSc.../formResponse";
-const FIELD_EMAIL = "entry.1234567890";
-const FIELD_TOWN  = "entry.2345678901";
-const FIELD_TYPE  = "entry.3456789012";
+**a. Register a web app.** Project settings -> Your apps -> Web. The mobile app
+is registered as Android only and its API key is Android-restricted, so the
+browser cannot reuse it. Copy the new web app's `apiKey` into
+`FIREBASE_API_KEY` at the top of `assets/js/site.js`.
+
+**b. Add this Firestore rule** (Firestore -> Rules). Create-only, size-capped,
+and unreadable from the browser -- you read the list in the console:
+
+```
+match /databases/{database}/documents {
+  match /waitlist/{doc} {
+    allow create: if request.resource.data.keys().hasOnly(
+                    ['email','town','kind','createdAt'])
+                  && request.resource.data.email is string
+                  && request.resource.data.email.size() < 200;
+    allow read, update, delete: if false;
+  }
+}
 ```
 
-Note the URL ends in **`/formResponse`**, not `/viewform`.
+Each document carries `email`, `kind` (`client` / `pro` / `area`), `town` where
+given, and `createdAt`.
 
-Responses land in the linked Google Sheet. The `Type` column tells you whether a
-signup was a `client`, a `pro`, or an `area` request.
+### 4. Analytics (optional, off by default)
+
+`ANALYTICS_CF_TOKEN` in `assets/js/site.js` is empty, so no analytics load and
+`privacy.html` truthfully says the site runs none.
+
+To switch it on: create a free Cloudflare Web Analytics site, paste the beacon
+token into that constant, **and in the same commit** replace the Cookies
+paragraph in `privacy.html` with:
+
+> This site uses Cloudflare Web Analytics to count page views. It sets no
+> cookies, does not track you across sites, and collects no personal
+> information. Your language choice is stored in your own browser and never
+> leaves your device.
+
+Do not ship the token without that wording change -- the current page promises
+no analytics.
 
 ---
 
@@ -101,11 +123,9 @@ these — do not machine-translate, especially the founder note.
 
 ## Still outstanding
 
-- **Devike's headshot is 200×200.** It will look soft in the 192px circle on
-  retina screens. Replace `assets/img/team-1.jpg` with a larger original.
+- **Devangi's headshot is 200×200** (`team-1.jpg`), shown in a 128px circle —
+  acceptable but not crisp on retina. A larger original would help.
 - **Confirm the photo-to-name mapping** in the team section before launch.
-- **A proper 1200×630 social share image.** `og:image` currently points at the
-  hero photo, which crops awkwardly in link previews.
 - **Real privacy policy and terms** before App Store / Play submission.
   `privacy.html` and `terms.html` are honest interim pages, not legal documents.
 - **Real photography** of actual verified providers, replacing the AI imagery.
