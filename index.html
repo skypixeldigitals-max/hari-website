@@ -66,6 +66,7 @@
       <a class="text-on-surface-variant hover:text-primary hover:bg-primary-container/10 transition-all duration-300 px-3 py-2 rounded-md font-body-md" data-t="nav_app" href="#inside-the-app">The app</a>
       <a class="text-on-surface-variant hover:text-primary hover:bg-primary-container/10 transition-all duration-300 px-3 py-2 rounded-md font-body-md" data-t="nav_pro" href="#pro">For professionals</a>
       <a class="text-on-surface-variant hover:text-primary hover:bg-primary-container/10 transition-all duration-300 px-3 py-2 rounded-md font-body-md" data-t="nav_faq" href="#faq">FAQ</a>
+      <a class="text-primary hover:bg-primary-container/10 transition-all duration-300 px-3 py-2 rounded-md font-body-md underline decoration-tertiary-fixed-dim underline-offset-4" data-t="nav_survey" href="survey.html">What needs fixing?</a>
     </div>
 
     <div class="flex items-center gap-4">
@@ -90,6 +91,7 @@
       <a class="flex items-center min-h-[48px] text-on-surface-variant hover:text-primary py-3 font-body-md border-b border-outline-variant/20" data-t="nav_app" href="#inside-the-app">The app</a>
       <a class="flex items-center min-h-[48px] text-on-surface-variant hover:text-primary py-3 font-body-md border-b border-outline-variant/20" data-t="nav_pro" href="#pro">For professionals</a>
       <a class="flex items-center min-h-[48px] text-on-surface-variant hover:text-primary py-3 font-body-md border-b border-outline-variant/20" data-t="nav_faq" href="#faq">FAQ</a>
+      <a class="flex items-center gap-2 min-h-[48px] text-primary py-3 font-body-md" data-t="nav_survey" href="survey.html">What needs fixing?</a>
     </div>
     <div class="mt-lg flex items-center justify-between gap-4">
       <div class="flex items-center gap-2 bg-surface-container-low rounded-full p-1 text-sm font-label-md text-on-surface-variant border border-outline-variant/30" role="group" aria-label="Language">
@@ -131,6 +133,14 @@
         <p class="font-body-sm text-surface-container-highest/70 text-center sm:text-left mt-2" data-t="hero_spam">We'll email you once, on launch day. No spam.</p>
         <p class="font-body-sm text-tertiary-fixed-dim hidden" data-form-msg role="status" aria-live="polite"></p>
       </form>
+
+      <!-- Straight to the survey. The email box asks for a launch reminder;
+           this asks what they actually need, which is the more useful answer. -->
+      <a class="inline-flex items-center gap-2 min-h-[44px] mt-md font-label-lg text-tertiary-fixed-dim hover:text-tertiary-fixed transition-colors underline decoration-tertiary-fixed-dim/40 underline-offset-4" href="survey.html">
+        <span class="material-symbols-outlined text-xl" aria-hidden="true">build</span>
+        <span data-t="survey_link">Or tell us what needs fixing</span>
+        <span class="material-symbols-outlined text-lg" aria-hidden="true">arrow_forward</span>
+      </a>
 
       <!-- Store badges: built in-house, no imitation Apple/Google marks -->
       <div class="pt-lg flex flex-wrap items-center gap-sm">
@@ -521,6 +531,12 @@
     </div>
     <p class="font-body-sm text-primary hidden" data-form-msg role="status" aria-live="polite"></p>
   </form>
+
+  <a class="inline-flex items-center justify-center gap-2 min-h-[52px] mb-10 bg-primary text-on-primary font-label-lg px-8 py-4 rounded-full hover:bg-primary/90 transition-colors active:scale-95 shadow-sm" href="survey.html">
+    <span class="material-symbols-outlined text-xl" aria-hidden="true">build</span>
+    <span data-t="survey_cta">Tell us what needs fixing</span>
+  </a>
+
   <div class="flex flex-wrap justify-center items-center gap-sm">
     <span class="store-badge bg-surface border-outline-variant/40 text-on-surface-variant">
       <span class="material-symbols-outlined text-2xl" aria-hidden="true">phone_iphone</span>

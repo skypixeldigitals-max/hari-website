@@ -75,7 +75,11 @@ const strings = {
     nav_services: "Services",
     nav_pro: "For professionals",
     nav_faq: "FAQ",
+    nav_survey: "What needs fixing?",
     nav_cta: "Get early access",
+
+    survey_link: "Or tell us what needs fixing",
+    survey_cta: "Tell us what needs fixing",
 
     hero_badge: "Launching soon in Sri Lanka",
     hero_title_1: "Home services,",
@@ -217,7 +221,11 @@ const strings = {
     nav_services: "සේවා",
     nav_pro: "කාර්මිකයන්ට",
     nav_faq: "ප්‍රශ්න",
+    nav_survey: "මොකද හදන්න ඕන?",
     nav_cta: "කලින්ම දැනගන්න",
+
+    survey_link: "නැත්නම් මොකද හදන්න ඕන කියන්න",
+    survey_cta: "මොකද හදන්න ඕන කියන්න",
 
     hero_badge: "ලංකාවේ ඉක්මනටම එනවා",
     hero_title_1: "ගෙදර වැඩ,",
@@ -356,7 +364,11 @@ const strings = {
     nav_services: "சேவைகள்",
     nav_pro: "தொழில்முறையாளர்களுக்கு",
     nav_faq: "கேள்விகள்",
+    nav_survey: "என்ன சரி செய்ய வேண்டும்?",
     nav_cta: "முதலில் அறிந்துகொள்ளுங்கள்",
+
+    survey_link: "அல்லது என்ன சரி செய்ய வேண்டும் என்று சொல்லுங்கள்",
+    survey_cta: "என்ன சரி செய்ய வேண்டும் என்று சொல்லுங்கள்",
 
     hero_badge: "இலங்கையில் விரைவில் அறிமுகம்",
     hero_title_1: "வீட்டுச் சேவைகள்,",
