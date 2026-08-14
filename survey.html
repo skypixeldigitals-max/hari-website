@@ -246,11 +246,6 @@
 
   </div>
 
-  <p class="font-body-sm text-on-surface-variant mt-8 text-center max-w-xl mx-auto">
-    Prefer to just talk? Message us directly on
-    <a class="text-primary underline decoration-tertiary-fixed-dim underline-offset-4"
-       href="https://wa.me/94740591853" target="_blank" rel="noopener noreferrer">+94 74 059 1853</a>.
-  </p>
 </section>
 
 </main>
@@ -270,13 +265,11 @@
 
    Paste the deployed web app URL below. Setup steps are in
    apps-script/Code.gs. While the URL is empty the form says so
-   honestly and points at WhatsApp rather than pretending to save.
+   honestly rather than pretending to have saved anything.
    ------------------------------------------------------------------ */
 var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzzYairD5a1CeBUqeKgiujeaMfhwEM46X4sGUfwaL3_riG23kHzLEkakBbcnTSgtHvFXA/exec";
 
 (function () {
-  var WHATSAPP_LINK = "https://wa.me/94740591853";
-
   var form = document.getElementById("survey");
   var msgEl = document.getElementById("s-msg");
   var btn = document.getElementById("s-submit");
@@ -317,10 +310,7 @@ var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzzYairD5a1CeBUqeKgiuj
     if (!payload.services) return fail("Please tick at least one thing you need.");
 
     if (!SCRIPT_URL) {
-      return fail(
-        'Sending is not switched on yet — please message us on ' +
-        '<a class="underline" href="' + WHATSAPP_LINK + '">WhatsApp</a>.'
-      );
+      return fail("Sending is not switched on yet. Please try again later.");
     }
 
     /* Keep the original markup: the label carries an icon element, so restoring
@@ -348,10 +338,7 @@ var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzzYairD5a1CeBUqeKgiuj
         done.scrollIntoView({ behavior: "smooth", block: "center" });
       })
       .catch(function () {
-        fail(
-          'That did not send. Please try again, or message us on ' +
-          '<a class="underline" href="' + WHATSAPP_LINK + '">WhatsApp</a>.'
-        );
+        fail("That did not send. Please check your connection and try again.");
         btn.disabled = false;
         btn.innerHTML = btnHtml;
       });
