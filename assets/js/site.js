@@ -92,6 +92,9 @@ const strings = {
     hero_btn: "Notify me at launch",
     hero_spam: "We'll email you once, on launch day. No spam.",
     badge_soon: "Coming soon to",
+    badge_play: "Google Play",
+    badge_iphone_label: "On iPhone, coming soon",
+    badge_iphone: "Straight from your browser",
 
     trust_1: "Fixed prices",
     trust_2: "Verified pros",
@@ -241,6 +244,9 @@ const strings = {
     hero_btn: "එළියට ආවම කියන්න",
     hero_spam: "එළියට එන දවසේ එක ඊමේල් එකක් විතරයි. වෙන කිසි දෙයක් එවන්නේ නෑ.",
     badge_soon: "ඉක්මනටම",
+    badge_play: "Google Play",
+    badge_iphone_label: "iPhone එකේ, ඉක්මනටම",
+    badge_iphone: "බ්‍රව්සරයෙන්ම",
 
     trust_1: "එකම ගාන",
     trust_2: "විශ්වාසවන්ත කාර්මිකයෝ",
@@ -387,6 +393,9 @@ const strings = {
     hero_btn: "அறிமுகமாகும்போது தெரிவிக்கவும்",
     hero_spam: "அறிமுக நாளில் ஒரு முறை மட்டும் மின்னஞ்சல் அனுப்புவோம். வேறு எதுவும் இல்லை.",
     badge_soon: "விரைவில்",
+    badge_play: "Google Play",
+    badge_iphone_label: "iPhone இல், விரைவில்",
+    badge_iphone: "உங்கள் உலாவியிலிருந்தே",
 
     trust_1: "நிர்ணயிக்கப்பட்ட விலை",
     trust_2: "சரிபார்க்கப்பட்ட தொழில்முறையாளர்கள்",

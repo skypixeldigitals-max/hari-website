@@ -110,7 +110,7 @@
 <section class="relative pt-24 pb-20 md:pt-32 md:pb-32 px-container-padding hero-min-h flex items-center overflow-hidden" id="hero">
   <div class="absolute inset-0 z-0">
     <picture><source srcset="assets/img/hero-home.webp" type="image/webp"><img src="assets/img/hero-home.jpg" alt="" width="1376" height="768" fetchpriority="high" class="w-full h-full object-cover object-center"></picture>
-    <div class="absolute inset-0 bg-gradient-to-r from-primary-container/95 via-primary-container/80 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary-container/95 via-primary-container/85 to-primary-container/40"></div>
     <div class="absolute inset-0 bg-primary-container/50 md:hidden"></div>
   </div>
 
@@ -136,31 +136,22 @@
         <p class="font-body-sm text-surface-container-highest/80 mt-3" data-t="hero_survey_note">Takes 30 seconds, and it helps us get ready for what people actually need.</p>
       </div>
 
-      <!-- Secondary: for people who are interested but have nothing broken today. -->
-      <form class="mt-lg max-w-md space-y-sm pt-lg border-t border-surface-container-highest/20" data-form="client" novalidate>
-        <p class="font-body-sm text-surface-container-highest/70" data-t="hero_email_alt">Or just hear from us when we launch:</p>
-        <div class="flex flex-col sm:flex-row gap-sm">
-          <label class="sr-only" for="hero-email" data-t="hero_input">Enter your email</label>
-          <input id="hero-email" name="email" type="email" required autocomplete="email" class="flex-1 px-4 py-3 rounded-full bg-surface-container-lowest/90 text-on-background border-none font-body-md shadow-sm" data-t-placeholder="hero_input" placeholder="Enter your email">
-          <button type="submit" class="bg-surface-container-lowest/15 text-surface-container-lowest border border-surface-container-highest/40 font-label-lg px-6 py-3 rounded-full hover:bg-surface-container-lowest/25 transition-colors sm:whitespace-nowrap active:scale-95" data-t="hero_btn">Notify me at launch</button>
-        </div>
-        <p class="font-body-sm text-tertiary-fixed-dim hidden" data-form-msg role="status" aria-live="polite"></p>
-      </form>
-
-      <!-- Store badges: built in-house, no imitation Apple/Google marks -->
+      <!-- Platform badges. Android ships as a real app; iPhone runs in the
+           browser. Deliberately worded differently rather than showing a fake
+           App Store badge for a listing that is not coming. -->
       <div class="pt-lg flex flex-wrap items-center gap-sm">
-        <span class="store-badge bg-primary/40 border-surface-container-highest/25 text-surface-container-highest">
-          <span class="material-symbols-outlined text-2xl" aria-hidden="true">phone_iphone</span>
-          <span class="leading-tight">
-            <span class="block font-label-md opacity-80" data-t="badge_soon">Coming soon to</span>
-            <span class="block font-label-lg text-surface-container-lowest">App Store</span>
-          </span>
-        </span>
         <span class="store-badge bg-primary/40 border-surface-container-highest/25 text-surface-container-highest">
           <span class="material-symbols-outlined text-2xl" aria-hidden="true">android</span>
           <span class="leading-tight">
             <span class="block font-label-md opacity-80" data-t="badge_soon">Coming soon to</span>
-            <span class="block font-label-lg text-surface-container-lowest">Google Play</span>
+            <span class="block font-label-lg text-surface-container-lowest" data-t="badge_play">Google Play</span>
+          </span>
+        </span>
+        <span class="store-badge bg-primary/40 border-surface-container-highest/25 text-surface-container-highest">
+          <span class="material-symbols-outlined text-2xl" aria-hidden="true">language</span>
+          <span class="leading-tight">
+            <span class="block font-label-md opacity-80" data-t="badge_iphone_label">On iPhone, coming soon</span>
+            <span class="block font-label-lg text-surface-container-lowest" data-t="badge_iphone">Straight from your browser</span>
           </span>
         </span>
       </div>
@@ -544,12 +535,12 @@
 
   <div class="flex flex-wrap justify-center items-center gap-sm">
     <span class="store-badge bg-surface border-outline-variant/40 text-on-surface-variant">
-      <span class="material-symbols-outlined text-2xl" aria-hidden="true">phone_iphone</span>
-      <span class="leading-tight text-left"><span class="block font-label-md opacity-70" data-t="badge_soon">Coming soon to</span><span class="block font-label-lg text-primary">App Store</span></span>
+      <span class="material-symbols-outlined text-2xl" aria-hidden="true">android</span>
+      <span class="leading-tight text-left"><span class="block font-label-md opacity-70" data-t="badge_soon">Coming soon to</span><span class="block font-label-lg text-primary" data-t="badge_play">Google Play</span></span>
     </span>
     <span class="store-badge bg-surface border-outline-variant/40 text-on-surface-variant">
-      <span class="material-symbols-outlined text-2xl" aria-hidden="true">android</span>
-      <span class="leading-tight text-left"><span class="block font-label-md opacity-70" data-t="badge_soon">Coming soon to</span><span class="block font-label-lg text-primary">Google Play</span></span>
+      <span class="material-symbols-outlined text-2xl" aria-hidden="true">language</span>
+      <span class="leading-tight text-left"><span class="block font-label-md opacity-70" data-t="badge_iphone_label">On iPhone, coming soon</span><span class="block font-label-lg text-primary" data-t="badge_iphone">Straight from your browser</span></span>
     </span>
   </div>
 </section>
