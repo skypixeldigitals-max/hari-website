@@ -124,23 +124,28 @@
 
       <p class="font-body-lg text-surface-container-highest" data-t="hero_desc">Verified professionals. Fixed upfront pricing. Live tracking to your door. The reliable way to manage your home.</p>
 
-      <form class="mt-xl max-w-md space-y-sm" data-form="client" novalidate>
+      <!-- The survey is the primary action. An email address only says someone
+           is curious; the survey says what they need, where they are, and how
+           to reach them — which is the answer worth having before launch. -->
+      <div class="mt-xl max-w-md">
+        <a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-lg px-8 py-4 rounded-full hover:bg-tertiary-fixed transition-colors active:scale-95 shadow-lg min-h-[56px]" href="survey.html">
+          <span class="material-symbols-outlined text-xl" aria-hidden="true">build</span>
+          <span data-t="hero_survey_btn">Tell us what needs fixing</span>
+          <span class="material-symbols-outlined text-lg" aria-hidden="true">arrow_forward</span>
+        </a>
+        <p class="font-body-sm text-surface-container-highest/80 mt-3" data-t="hero_survey_note">Takes 30 seconds. If it is urgent we can send someone this week.</p>
+      </div>
+
+      <!-- Secondary: for people who are interested but have nothing broken today. -->
+      <form class="mt-lg max-w-md space-y-sm pt-lg border-t border-surface-container-highest/20" data-form="client" novalidate>
+        <p class="font-body-sm text-surface-container-highest/70" data-t="hero_email_alt">Or just hear from us when we launch:</p>
         <div class="flex flex-col sm:flex-row gap-sm">
           <label class="sr-only" for="hero-email" data-t="hero_input">Enter your email</label>
-          <input id="hero-email" name="email" type="email" required autocomplete="email" class="flex-1 px-4 py-3 rounded-full bg-surface-container-lowest text-on-background border-none font-body-md shadow-sm" data-t-placeholder="hero_input" placeholder="Enter your email">
-          <button type="submit" class="bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-lg px-6 py-3 rounded-full hover:bg-tertiary-fixed transition-colors sm:whitespace-nowrap active:scale-95 shadow-md" data-t="hero_btn">Notify me at launch</button>
+          <input id="hero-email" name="email" type="email" required autocomplete="email" class="flex-1 px-4 py-3 rounded-full bg-surface-container-lowest/90 text-on-background border-none font-body-md shadow-sm" data-t-placeholder="hero_input" placeholder="Enter your email">
+          <button type="submit" class="bg-surface-container-lowest/15 text-surface-container-lowest border border-surface-container-highest/40 font-label-lg px-6 py-3 rounded-full hover:bg-surface-container-lowest/25 transition-colors sm:whitespace-nowrap active:scale-95" data-t="hero_btn">Notify me at launch</button>
         </div>
-        <p class="font-body-sm text-surface-container-highest/70 text-center sm:text-left mt-2" data-t="hero_spam">We'll email you once, on launch day. No spam.</p>
         <p class="font-body-sm text-tertiary-fixed-dim hidden" data-form-msg role="status" aria-live="polite"></p>
       </form>
-
-      <!-- Straight to the survey. The email box asks for a launch reminder;
-           this asks what they actually need, which is the more useful answer. -->
-      <a class="inline-flex items-center gap-2 min-h-[44px] mt-md font-label-lg text-tertiary-fixed-dim hover:text-tertiary-fixed transition-colors underline decoration-tertiary-fixed-dim/40 underline-offset-4" href="survey.html">
-        <span class="material-symbols-outlined text-xl" aria-hidden="true">build</span>
-        <span data-t="survey_link">Or tell us what needs fixing</span>
-        <span class="material-symbols-outlined text-lg" aria-hidden="true">arrow_forward</span>
-      </a>
 
       <!-- Store badges: built in-house, no imitation Apple/Google marks -->
       <div class="pt-lg flex flex-wrap items-center gap-sm">

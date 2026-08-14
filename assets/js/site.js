@@ -80,6 +80,9 @@ const strings = {
 
     survey_link: "Or tell us what needs fixing",
     survey_cta: "Tell us what needs fixing",
+    hero_survey_btn: "Tell us what needs fixing",
+    hero_survey_note: "Takes 30 seconds. If it is urgent we can send someone this week.",
+    hero_email_alt: "Or just hear from us when we launch:",
 
     hero_badge: "Launching soon in Sri Lanka",
     hero_title_1: "Home services,",
@@ -226,6 +229,9 @@ const strings = {
 
     survey_link: "නැත්නම් මොකද හදන්න ඕන කියන්න",
     survey_cta: "මොකද හදන්න ඕන කියන්න",
+    hero_survey_btn: "මොකද හදන්න ඕන කියන්න",
+    hero_survey_note: "තත්පර 30යි. ඉක්මනට ඕන නම් මේ සතියේම කෙනෙක් එවන්න පුළුවන්.",
+    hero_email_alt: "නැත්නම් එළියට ආවම විතරක් දැනගන්න:",
 
     hero_badge: "ලංකාවේ ඉක්මනටම එනවා",
     hero_title_1: "ගෙදර වැඩ,",
@@ -369,6 +375,9 @@ const strings = {
 
     survey_link: "அல்லது என்ன சரி செய்ய வேண்டும் என்று சொல்லுங்கள்",
     survey_cta: "என்ன சரி செய்ய வேண்டும் என்று சொல்லுங்கள்",
+    hero_survey_btn: "என்ன சரி செய்ய வேண்டும் என்று சொல்லுங்கள்",
+    hero_survey_note: "30 வினாடிகள். அவசரம் என்றால் இந்த வாரமே ஒருவரை அனுப்ப முடியும்.",
+    hero_email_alt: "அல்லது அறிமுகமாகும்போது மட்டும் தெரிந்துகொள்ளுங்கள்:",
 
     hero_badge: "இலங்கையில் விரைவில் அறிமுகம்",
     hero_title_1: "வீட்டுச் சேவைகள்,",
