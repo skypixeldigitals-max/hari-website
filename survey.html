@@ -80,7 +80,60 @@
         </p>
       </div>
 
-      <!-- 3. Service picker -->
+      <!-- 3. Area -->
+      <div>
+        <label class="block font-label-lg text-primary mb-2" for="s-area">Where are you?</label>
+        <select id="s-area" name="area" required
+                class="w-full px-4 py-3.5 rounded-xl bg-surface-container text-on-background border border-transparent font-body-md">
+          <option value="" selected disabled>Choose your area</option>
+          <optgroup label="Colombo">
+            <option>Colombo 1 — Fort</option>
+            <option>Colombo 2 — Slave Island</option>
+            <option>Colombo 3 — Kollupitiya</option>
+            <option>Colombo 4 — Bambalapitiya</option>
+            <option>Colombo 5 — Havelock Town</option>
+            <option>Colombo 6 — Wellawatte</option>
+            <option>Colombo 7 — Cinnamon Gardens</option>
+            <option>Colombo 8 — Borella</option>
+            <option>Colombo 9 — Dematagoda</option>
+            <option>Colombo 10 — Maradana</option>
+            <option>Colombo 11 — Pettah</option>
+            <option>Colombo 12 — Hulftsdorp</option>
+            <option>Colombo 13 — Kotahena</option>
+            <option>Colombo 14 — Grandpass</option>
+            <option>Colombo 15 — Mutwal</option>
+          </optgroup>
+          <optgroup label="Suburbs">
+            <option>Dehiwala</option>
+            <option>Mount Lavinia</option>
+            <option>Ratmalana</option>
+            <option>Moratuwa</option>
+            <option>Nugegoda</option>
+            <option>Kohuwala</option>
+            <option>Nawala</option>
+            <option>Rajagiriya</option>
+            <option>Battaramulla</option>
+            <option>Sri Jayawardenepura Kotte</option>
+            <option>Malabe</option>
+            <option>Kaduwela</option>
+            <option>Maharagama</option>
+            <option>Pannipitiya</option>
+            <option>Boralesgamuwa</option>
+            <option>Piliyandala</option>
+            <option>Homagama</option>
+            <option>Wattala</option>
+            <option>Kelaniya</option>
+            <option>Ja-Ela</option>
+            <option>Negombo</option>
+          </optgroup>
+          <option>Somewhere else</option>
+        </select>
+        <p class="font-body-sm text-on-surface-variant mt-2">
+          This tells us where to send someone first.
+        </p>
+      </div>
+
+      <!-- 4. Service picker -->
       <fieldset>
         <legend class="font-label-lg text-primary mb-1">What do you need?</legend>
         <p class="font-body-sm text-on-surface-variant mb-3">Tick anything that applies.</p>
@@ -130,7 +183,7 @@
         </div>
       </fieldset>
 
-      <!-- 4. The problem -->
+      <!-- 5. The problem -->
       <div>
         <label class="block font-label-lg text-primary mb-2" for="s-problem">Tell us in one line</label>
         <textarea id="s-problem" name="problem" rows="2"
@@ -140,18 +193,36 @@
 
       <!-- Submit -->
       <div class="pt-1">
-        <button type="submit"
-                class="w-full inline-flex items-center justify-center gap-2 bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-lg px-6 py-4 rounded-full hover:bg-tertiary-fixed transition-colors active:scale-95 shadow-md min-h-[56px]">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-          Send on WhatsApp
+        <button id="s-submit" type="submit"
+                class="w-full inline-flex items-center justify-center gap-2 bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-lg px-6 py-4 rounded-full hover:bg-tertiary-fixed transition-colors active:scale-95 shadow-md min-h-[56px] disabled:opacity-60">
+          <span class="material-symbols-outlined text-xl" aria-hidden="true">send</span>
+          Send it in
         </button>
         <p id="s-msg" class="font-body-sm text-error mt-3 hidden" role="status" aria-live="polite"></p>
         <p class="font-body-sm text-on-surface-variant mt-3 text-center">
-          This opens WhatsApp with your answers filled in. Just press send.
+          We will message you on WhatsApp. We never share your number.
         </p>
       </div>
 
     </form>
+
+    <!-- Shown in place of the form once it has been sent -->
+    <div id="s-done" class="hidden text-center py-6">
+      <div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mx-auto mb-5">
+        <span class="material-symbols-outlined text-4xl text-primary" aria-hidden="true">check</span>
+      </div>
+      <h2 class="font-display text-headline-md text-primary mb-3">Got it, thank you.</h2>
+      <p class="font-body-md text-on-surface-variant max-w-sm mx-auto mb-6">
+        We have your details. We will message you on WhatsApp — and if it is
+        urgent, we can send someone this week.
+      </p>
+      <a class="inline-flex items-center justify-center gap-2 min-h-[52px] bg-primary text-on-primary font-label-lg px-6 py-3.5 rounded-full hover:bg-primary/90 transition-colors"
+         href="https://wa.me/94740591853" target="_blank" rel="noopener noreferrer">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        Message us now
+      </a>
+    </div>
+
   </div>
 </section>
 
@@ -196,21 +267,24 @@
 
 <script>
 /* ------------------------------------------------------------------
-   Survey -> WhatsApp.
+   Survey -> Google Sheet, via an Apps Script web app.
 
-   No backend on purpose. The answers are formatted into a WhatsApp
-   message and the visitor presses send, which puts the lead straight
-   into the same inbox the follow-up happens in. Nothing to configure,
-   nothing to check, and no list that quietly collects nothing.
+   Paste the deployed web app URL below. Setup steps are in
+   apps-script/Code.gs. While the URL is empty the form says so
+   honestly and points at WhatsApp rather than pretending to save.
    ------------------------------------------------------------------ */
+var SCRIPT_URL = "";
+
 (function () {
-  var WHATSAPP = "94740591853";
+  var WHATSAPP_LINK = "https://wa.me/94740591853";
 
   var form = document.getElementById("survey");
   var msgEl = document.getElementById("s-msg");
+  var btn = document.getElementById("s-submit");
+  var done = document.getElementById("s-done");
 
   function fail(text, focusEl) {
-    msgEl.textContent = text;
+    msgEl.innerHTML = text;
     msgEl.classList.remove("hidden");
     if (focusEl) focusEl.focus();
   }
@@ -221,37 +295,67 @@
 
     var nameEl = document.getElementById("s-name");
     var phoneEl = document.getElementById("s-phone");
+    var areaEl = document.getElementById("s-area");
 
-    var name = nameEl.value.trim();
-    var phone = phoneEl.value.trim();
-    var problem = document.getElementById("s-problem").value.trim();
+    var payload = {
+      name: nameEl.value.trim(),
+      phone: phoneEl.value.trim(),
+      area: areaEl.value,
+      problem: document.getElementById("s-problem").value.trim(),
+      services: Array.prototype.map.call(
+        form.querySelectorAll('input[name="service"]:checked'),
+        function (el) { return el.value; }
+      ).join(", ")
+    };
 
-    var services = Array.prototype.map.call(
-      form.querySelectorAll('input[name="service"]:checked'),
-      function (el) { return el.value; }
-    );
-
-    if (!name) return fail("Please tell us your name.", nameEl);
+    if (!payload.name) return fail("Please tell us your name.", nameEl);
     /* Deliberately loose: people write 07X, +947X, or with spaces. Rejecting
        a real customer over formatting costs more than a messy number does. */
-    if (phone.replace(/\D/g, "").length < 9) {
+    if (payload.phone.replace(/\D/g, "").length < 9) {
       return fail("That number looks too short — please check it.", phoneEl);
     }
-    if (!services.length) {
-      return fail("Please tick at least one thing you need.");
+    if (!payload.area) return fail("Please choose your area.", areaEl);
+    if (!payload.services) return fail("Please tick at least one thing you need.");
+
+    if (!SCRIPT_URL) {
+      return fail(
+        'Sending is not switched on yet — please message us on ' +
+        '<a class="underline" href="' + WHATSAPP_LINK + '">WhatsApp</a>.'
+      );
     }
 
-    var lines = [
-      "Hi HARI, I need help.",
-      "",
-      "Name: " + name,
-      "Number: " + phone,
-      "Need: " + services.join(", ")
-    ];
-    if (problem) lines.push("Problem: " + problem);
+    /* Keep the original markup: the label carries an icon element, so restoring
+       it as plain text after a failure would silently drop the icon. */
+    var btnHtml = btn.innerHTML;
+    btn.disabled = true;
+    btn.textContent = "Sending…";
 
-    window.location.href =
-      "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(lines.join("\n"));
+    /* text/plain is deliberate. application/json would make the browser send a
+       CORS preflight, which Apps Script web apps do not answer, and the request
+       would never arrive. Apps Script reads the raw body either way. */
+    fetch(SCRIPT_URL, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(payload)
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        return res.json();
+      })
+      .then(function (out) {
+        if (!out || !out.ok) throw new Error("rejected");
+        form.classList.add("hidden");
+        done.classList.remove("hidden");
+        done.scrollIntoView({ behavior: "smooth", block: "center" });
+      })
+      .catch(function () {
+        fail(
+          'That did not send. Please try again, or message us on ' +
+          '<a class="underline" href="' + WHATSAPP_LINK + '">WhatsApp</a>.'
+        );
+        btn.disabled = false;
+        btn.innerHTML = btnHtml;
+      });
   });
 })();
 </script>
